@@ -2,14 +2,14 @@
 .rating{
     text-align: end;
 
-    // p{
-    //     color: $text-tertiary-color;
-    // }
+    p{
+        color: $text-tertiary-color;
+    }
 }
 .star-rating {
     display:flex;
     flex-direction: row-reverse;
-    font-size:1.5em;
+    font-size: 1.25rem;
     justify-content:space-around;
     text-align:center;
     width:5em;

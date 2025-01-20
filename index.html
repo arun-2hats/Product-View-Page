@@ -19,23 +19,23 @@
     <header>
         <nav>
             <div class="left-section">
-                <img src="./assets/logo transparent.svg" alt="site-logo">
+                <img width="41" height="41" src="./assets/logo transparent.svg" alt="site-logo">
                 <ul>
-                    <li><a tabindex="0" class="link active-link " href="#">WOMEN</a></li>
-                    <li><a tabindex="1" class="link" href="#">MEN</a></li>
-                    <li><a tabindex="2" class="link" href="#">KIDS</a></li>
+                    <li><a tabindex="1" class="link active-link " href="#">WOMEN</a></li>
+                    <li><a tabindex="2" class="link" href="#">MEN</a></li>
+                    <li><a tabindex="3" class="link" href="#">KIDS</a></li>
                 </ul>
             </div>
             <div class="right-section">
                 <div class="search-container">
-                    <input tabindex="3"  aria-label="Search Item" placeholder="Search for items" class="search-input" type="text">
-                    <button tabindex="4"  aria-label="Search Item" class="btn icon-btn" ><img src="./assets/Search.svg" alt=""></button>
+                    <input tabindex="4"  aria-label="Search Item" placeholder="Search for items" class="search-input" type="text">
+                    <button tabindex="5"  aria-label="Search Item" class="btn icon-btn" ><img width="20" height="20" src="./assets/Search.svg" alt=""></button>
                 </div>
                 <div class="icon-links">
                     <ul>
-                        <li><a tabindex="5" aria-label="Account" class="icon-link" href=""><img width="20" height="20" src="./assets/Account.svg" alt=""></a></li>
-                        <li><a tabindex="6" aria-label="Whishlist" class="icon-link" href=""><img width="20" height="20" src="./assets/Outline.svg" alt=""></a></li>
-                        <li><a tabindex="7" aria-label="Cart" class="icon-link" href=""><img width="20" height="20" src="./assets/Empty Cart.svg" alt=""></a></li>
+                        <li><a tabindex="6" aria-label="Account" class="icon-link" href=""><img width="20" height="20" src="./assets/Account.svg" alt=""></a></li>
+                        <li><a tabindex="7" aria-label="Whishlist" class="icon-link" href=""><img width="20" height="20" src="./assets/Outline.svg" alt=""></a></li>
+                        <li><a tabindex="8" aria-label="Cart" class="icon-link" href=""><img width="20" height="20" src="./assets/Empty Cart.svg" alt=""></a></li>
                     </ul>
                 </div>
             </div>
@@ -47,11 +47,11 @@
         <h1 class="lato-black">Basic hooded sweatshirt in pink</h1>
 
         <div class="tab-links">
-            <button tabindex="8" aria-label="Add to Favourite" class="active-tab-btn btn lato-bold">
+            <button tabindex="9" aria-label="Add to Favourite" class="active-tab-btn btn lato-bold">
                 Favourite</button>
-            <button tabindex="9" aria-label="Product Details" class="tab-btn btn lato-bold">
+            <button tabindex="10" aria-label="Product Details" class="tab-btn btn lato-bold">
                 Product details</button>
-                <button tabindex="10" aria-label="Reviews" class="tab-btn btn lato-bold">
+                <button tabindex="11" aria-label="Reviews" class="tab-btn btn lato-bold">
                     Reviews<sup >12</sup ></button>
         </div>
 
@@ -62,20 +62,22 @@
                     
                     <img src="./assets/product-image1.jpg" height="600" width="600" alt="">
                     <div class="slider-navs">
-                        <button aria-label="Previous" class="btn icon-btn" ><img src="./assets/Left.svg" alt=""></button>
-                        <button aria-label="Next" class="btn icon-btn"><img src="./assets/Right.svg" alt=""></button>
+                        <button tabindex="12" aria-label="Previous" class="btn icon-btn" ><img src="./assets/Left.svg" alt=""></button>
+                        <button tabindex="13" aria-label="Next" class="btn icon-btn"><img src="./assets/Right.svg" alt=""></button>
                     </div>
                 </div>
                 <div class="preview-imgs">
-                    <img src="./assets/product-image1.jpg" height="100" width="100" alt="">
-                    <img src="./assets/product-image1.jpg" height="100" width="100" alt="">
-                    <img src="./assets/product-image1.jpg" height="100" width="100" alt="">
-                    <img src="./assets/product-image1.jpg" height="100" width="100" alt="">
+                    <button tabindex="14" class="btn img-button"><img src="./assets/product-image1.jpg" height="100" width="100" alt=""></button>
+                    <button tabindex="15" class="btn img-button"><img src="./assets/product-image1.jpg" height="100" width="100" alt=""></button>
+                    <button tabindex="16" class="btn img-button"><img src="./assets/product-image1.jpg" height="100" width="100" alt=""></button>
+                    <button tabindex="17" class="btn img-button"><img src="./assets/product-image1.jpg" height="100" width="100" alt=""></button>
+                    
                     <div class="video-thumbnail">
-                        <img class src="./assets/product-image1.jpg" height="100" width="100" alt="">
-                        <div class="overlay">
-                            <img src="./assets/Play.svg" alt="">
-                        </div>
+                        <button tabindex="18" class="btn img-button"><img class src="./assets/product-image1.jpg" height="100" width="100" alt="">
+                            <div class="overlay">
+                                <img src="./assets/Play.svg" alt="">
+                            </div></button>
+                        
                     </div>
                 </div>
             </div>
@@ -84,7 +86,7 @@
             <div class="product-meta-data">
                 <div class="price-and-review">
                     <div class="price">
-                        <h4>$15.50 <span class="lato-regular">$31.00</span></h4>
+                        <h3>$15.50 <span class="lato-regular">$31.00</span></h4>
                         <div class="percentage-tag">-50%</div>
                     </div>
 
@@ -108,15 +110,15 @@
                 <div class="product-color-varient">
                     <p class="p-secondary">Colors</p>
                     <div class="color-palette">
-                        <div class="picker active-picker">
+                        <button tabindex="19" class="picker active-picker color-btn">
                             <div class="color"></div>
-                        </div>
-                        <div class="picker ">
+                        </button>
+                        <button tabindex="20" class="picker color-btn">
                             <div class="color"></div>
-                        </div>
-                        <div class="picker ">
+                        </button>
+                        <button tabindex="21" class="picker color-btn">
                             <div class="color"></div>
-                        </div>
+                        </button>
                         <p class="p-tertiary">Pink</p>
                     </div>
                 </div>
@@ -131,7 +133,7 @@
                             <option value="MD">MD</option>
                             <option value="LG">LG</option>
                         </select>
-                        <button aria-label="Size Chart" class="ghost-btn lato-bold p-secondary">
+                        <button tabindex="22"  aria-label="Size Chart" class="ghost-btn lato-bold">
                             <span><img src="./assets/hanger.svg" alt=""> </span> Size Chart
                         </button>
                     </div>
@@ -142,11 +144,11 @@
                     <!-- Quantity Input -->
                      <input class="input input-number" type="number" />
                     <!-- Add to Cart -->
-                     <button aria-label="Add to Cart" class="primary-btn btn lato-bold">
+                     <button tabindex="23"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
                         <img src="./assets/Cart.svg" alt="">
                         Add To Cart</button>
                     <!-- Favourite -->
-                     <button aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
+                     <button tabindex="24" aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
                         <img src="./assets/outline.svg" alt="">
                         Favourite</button>
                 </div>
@@ -206,34 +208,34 @@
 
                     <div class="share-links">
                         <h6 class="lato-bold">Share: </h6>
-                        <img src="./assets/Facebook.svg" alt="">
-                        <img src="./assets/Twitter.svg" alt="">
-                        <img src="./assets/pinterest.svg" alt="">
+                        <button class="btn ghost-btn" tabindex="25" aria-label="Facebook"><img src="./assets/Facebook.svg" alt=""></button>
+                        <button class="btn ghost-btn" tabindex="26" aria-label="Facebook"><img src="./assets/Twitter.svg" alt=""></button>
+                        <button class="btn ghost-btn" tabindex="27" aria-label="Facebook"><img src="./assets/pinterest.svg" alt=""></button>
                     </div>
 
                     <div class="payment-options">
-                        <div class="payment-container">
+                        <button tabindex="28" class="payment-container">
                             <img src="./assets/visa.svg" alt="">
-                        </div>
-                        <div class="payment-container">
+                        </button>
+                        <button tabindex="29" class="payment-container">
                             <img src="./assets/master-card.svg" alt="">
-                        </div>
-                        <div class="payment-container">
+                        </button>
+                        <button tabindex="30" class="payment-container">
                             <img src="./assets/pay-pal.svg" alt="">
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        
+                                
     </section>
 
-    <section class="subscirbe-section">
+    <!-- <section class="subscirbe-section">
         <div class="left-section">
             <h2 class="lato-black h1">Subscribe for updates</h2>
             <p class="p-medium ">Subscribe for exclusive early sale access and new arrivals.</p>
         </div>
         <img src="./assets/section2-img.jpg" height="416" width="461" alt="subscribe letter illustration">
-    </section>
+    </section> -->
 </body>
 </html>

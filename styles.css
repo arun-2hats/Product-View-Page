@@ -179,11 +179,14 @@ header nav .right-section .icon-links ul li a:hover {
 .rating {
   text-align: end;
 }
+.rating p {
+  color: #787A80;
+}
 
 .star-rating {
   display: flex;
   flex-direction: row-reverse;
-  font-size: 1.5em;
+  font-size: 1.25rem;
   justify-content: space-around;
   text-align: center;
   width: 5em;
@@ -219,10 +222,10 @@ header nav .right-section .icon-links ul li a:hover {
   align-items: start;
   justify-content: center;
 }
-.product-meta-data .price-and-review .price h4 {
+.product-meta-data .price-and-review .price h3 {
   color: #DB0000;
 }
-.product-meta-data .price-and-review .price h4 span {
+.product-meta-data .price-and-review .price h3 span {
   text-decoration: line-through;
   color: #787A80;
   font-size: 18px;
@@ -251,8 +254,8 @@ header nav .right-section .icon-links ul li a:hover {
   flex-direction: row;
 }
 .product-meta-data .product-color-varient .color-palette .picker {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 1px solid #D7DADD;
   border-radius: 50%;
   display: grid;
@@ -275,6 +278,9 @@ header nav .right-section .icon-links ul li a:hover {
 }
 .product-meta-data .product-color-varient .color-palette .active-picker {
   border: 1px solid #17696A;
+}
+.product-meta-data .product-color-varient .color-palette p {
+  color: #787A80;
 }
 .product-meta-data .select-row {
   display: flex;
@@ -323,6 +329,7 @@ header nav .right-section .icon-links ul li a:hover {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  align-items: center;
 }
 .product-meta-data .delivery-return-data-section .payment-options {
   display: flex;
@@ -363,51 +370,87 @@ header nav .right-section .icon-links ul li a:hover {
 }
 
 body {
-  color: #17696A;
   font-family: "Lato", serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1E212C;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", serif;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
 }
 
 h1, .h1 {
-  font-size: 46px;
-  color: #1E212C;
-  margin: 12px 0;
+  font-size: 2.875rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 24px;
-  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: 100;
 }
 
 h6 {
-  font-size: 16px;
-  margin: 0;
-  color: #1E212C;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 p {
-  font-size: 16px;
-  margin: 0px;
-  color: #424551;
-}
-
-.p-secondary {
-  color: #424551;
-}
-
-.p-tertiary {
-  color: #787A80;
-}
-
-.p-medium {
-  font-size: 20px;
+  margin: 0 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 a {
+  color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
-sup {
-  font-size: 10px;
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 table {
@@ -460,8 +503,6 @@ select {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  outline: none;
-  outline: none;
   padding: 16px 16px;
 }
 .btn:hover {
@@ -484,8 +525,8 @@ select {
 
 .ghost-btn {
   background: none;
+  border: none;
   cursor: pointer;
-  color: white;
 }
 
 .tab-btn {
@@ -498,6 +539,16 @@ select {
   border-radius: 50%;
   height: 48px;
   width: 48px;
+}
+
+.img-button {
+  padding: 0;
+}
+
+.color-btn {
+  padding: 0px;
+  background-color: none;
+  background: none;
 }
 
 section {

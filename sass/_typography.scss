@@ -1,0 +1,107 @@
+// 1. Variables
+// Define font families, sizes, and weights
+$font-primary:  "Lato", serif;
+$font-secondary: 'Playfair Display', serif;
+
+$font-size-base: 1rem; // Base font size
+$line-height-base: 1.5;
+
+$font-weight-light: 100;
+$font-weight-extra-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$heading-color: #333;
+
+// 2. Base Typography
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-primary-color;
+  margin: 0;
+  padding: 0;
+}
+
+// 3. Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: 2.875rem;
+  font-weight: $font-weight-black;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-regular;
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: $font-weight-light;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: $font-weight-light;
+}
+
+// 4. Paragraphs
+p {
+  margin: 0 0 0;
+  font-size: 1rem;
+  line-height: $line-height-base;
+}
+
+// 5. Links
+a {
+  color: $heading-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    // color: darken($heading-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+// 6. Utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}

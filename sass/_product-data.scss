@@ -12,7 +12,7 @@
             align-items: start;
             justify-content: center;
 
-            h4{
+            h3{
                 color: $red;
 
                 span{
@@ -51,8 +51,8 @@
             gap: 8px;
             flex-direction: row;
             .picker{
-                width: 24px;
-                height: 24px;
+                width: 26px;
+                height: 26px;
                 border: 1px solid $border-color-default;
                 border-radius: $border-radius-full;
                 display: grid;
@@ -78,6 +78,10 @@
 
             .active-picker{
                 border: 1px solid $primary-color;
+            }
+
+            p{
+                color: $text-tertiary-color;      
             }
         }
 
@@ -136,6 +140,7 @@
             display: flex;
             flex-direction: row;
             gap: 16px;
+            align-items: center;
         }
 
         .payment-options{

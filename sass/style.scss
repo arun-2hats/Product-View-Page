@@ -8,56 +8,57 @@
 @import './product-data';
 @import './tab-links';
 @import './subscribe-section';
+@import './typography';
 
-body{
-    color: $primary-color;
-    font-family: "Lato", serif;
-}
+// body{
+//     // color: $primary-color;
+//     font-family: "Lato", serif;
+// }
 
-// Typography
+// // Typography
 
-h1, .h1{
-    font-size: 46px;
-    color: $text-primary-color;
-    margin: 12px 0;
-}
+// h1, .h1{
+//     font-size: 46px;
+//     color: $text-primary-color;
+//     margin: 12px 0;
+// }
 
-h4{
-    font-size: 24px;
-    margin: 0;
-}
+// h4{
+//     font-size: 24px;
+//     margin: 0;
+// }
 
-h6{
-    font-size: 16px;
-    margin: 0;
-    color: $text-primary-color;
-}
+// h6{
+//     font-size: 16px;
+//     margin: 0;
+//     color: $text-primary-color;
+// }
 
-p{
-    font-size: $base-font-size;
-    margin: 0px;
-    color: $text-secondary-color;
-}
+// p{
+//     font-size: $base-font-size;
+//     margin: 0px;
+//     color: $text-secondary-color;
+// }
 
-.p-secondary{
-    color: $text-secondary-color;
-}
+// .p-secondary{
+//     color: $text-secondary-color;
+// }
 
-.p-tertiary{
-    color: $text-tertiary-color;
-}
+// .p-tertiary{
+//     color: $text-tertiary-color;
+// }
 
-.p-medium{
-    font-size: $md-font-size;
-}
+// .p-medium{
+//     font-size: $md-font-size;
+// }
 
-a{
-    text-decoration: none;
-}
+// a{
+//     text-decoration: none;
+// }
 
-sup{
-    font-size: $xs-font-size;
-}
+// sup{
+//     font-size: $xs-font-size;
+// }
 
 table{
     color: $text-secondary-color;
@@ -117,8 +118,8 @@ select {
     border-radius: $border-radius-base;
     border: none;
     cursor: pointer;
-    outline: none;
-    outline: none;
+    // outline: none;
+    // outline: none;
     padding: 16px 16px;
 
     &:hover{
@@ -145,9 +146,9 @@ select {
 .ghost-btn{
     background: none;
     // outline: none;
-    // border: none;
+    border: none;
     cursor: pointer;
-    color: $text-light;
+    // color: $text-light;
 }
 
 .tab-btn{
@@ -163,6 +164,15 @@ select {
     width: 48px;
 }
 
+.img-button{
+    padding: 0;
+}
+
+.color-btn{
+    padding: 0px;
+    background-color: none;
+    background: none;
+}
 
 section{
     padding: 0px 96px;
