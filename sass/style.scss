@@ -1,0 +1,169 @@
+// Sass Imports
+@import './variables';
+@import './header';
+@import './search-input';
+@import './font';
+@import './img-slider';
+@import './rating';
+@import './product-data';
+@import './tab-links';
+@import './subscribe-section';
+
+body{
+    color: $primary-color;
+    font-family: "Lato", serif;
+}
+
+// Typography
+
+h1, .h1{
+    font-size: 46px;
+    color: $text-primary-color;
+    margin: 12px 0;
+}
+
+h4{
+    font-size: 24px;
+    margin: 0;
+}
+
+h6{
+    font-size: 16px;
+    margin: 0;
+    color: $text-primary-color;
+}
+
+p{
+    font-size: $base-font-size;
+    margin: 0px;
+    color: $text-secondary-color;
+}
+
+.p-secondary{
+    color: $text-secondary-color;
+}
+
+.p-tertiary{
+    color: $text-tertiary-color;
+}
+
+.p-medium{
+    font-size: $md-font-size;
+}
+
+a{
+    text-decoration: none;
+}
+
+sup{
+    font-size: $xs-font-size;
+}
+
+table{
+    color: $text-secondary-color;
+    border-collapse: collapse;
+    width: 100%;
+    
+    tr{
+        border-bottom: 1px solid $border-color-default;
+        font-size: $base-font-size;
+    }
+
+    td, th {
+        text-align: left;
+        padding: 12px;
+    }
+
+    th{
+        font-size: $sm-font-size;
+        color: $text-tertiary-color;
+    }
+}
+
+// Inputs
+select {
+    /* Reset Select */
+    // appearance: none;
+    border: 1px solid $border-color-default;
+    box-shadow: none;
+    /* Personalize */
+    // flex: 1;
+    // padding: 0 1em;
+    // color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    width: 400px;
+    padding: 16px 16px;
+    border-radius: $border-radius-base;
+}
+
+.input{
+    padding: 16px 16px;
+    border-radius: $border-radius-base;
+    border: 1px solid $border-color-default;
+}
+
+.input-number{
+    width: 100px;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    border-radius: $border-radius-base;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    outline: none;
+    padding: 16px 16px;
+
+    &:hover{
+        background-color: $button-hover-bg;
+    }
+
+}
+
+.primary-btn{
+    background: $primary-color;
+    color: $text-light;
+
+    &:hover{
+        background-color: none;
+    }
+}
+
+.secondary-btn, .active-tab-btn{
+    background: transparent;
+    border: 1px solid $primary-color !important; 
+    color: $primary-color;
+}
+
+.ghost-btn{
+    background: none;
+    // outline: none;
+    // border: none;
+    cursor: pointer;
+    color: $text-light;
+}
+
+.tab-btn{
+    background: transparent;
+    color: $text-tertiary-color;
+    
+}
+
+.icon-btn{
+    background-color: white;
+    border-radius: $border-radius-full;
+    height: 48px;
+    width: 48px;
+}
+
+
+section{
+    padding: 0px 96px;
+}

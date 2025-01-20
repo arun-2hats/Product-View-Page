@@ -1,0 +1,9 @@
+.tab-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid $border-color-default;
+    padding-bottom: 24px;
+}
+

@@ -1,0 +1,165 @@
+
+.product-meta-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .price-and-review{
+        .price{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+
+            h4{
+                color: $red;
+
+                span{
+                    text-decoration: line-through;
+                    color: $secondary-text-color;
+                    font-size: 18px;
+                    
+                }
+            }
+        }
+
+        .percentage-tag{
+            background-color: $red;
+            padding: 2px 8px;
+            color: $text-light;
+            margin-left: 16px;
+            border-radius: $border-radius-base;
+            
+        }
+    }
+
+    .price-and-review{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .product-color-varient{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .color-palette{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-direction: row;
+            .picker{
+                width: 24px;
+                height: 24px;
+                border: 1px solid $border-color-default;
+                border-radius: $border-radius-full;
+                display: grid;
+                justify-items: center;
+                align-content: center;
+
+                .color{
+                    width: 18px;
+                    height: 18px;
+                    border-radius: $border-radius-full; 
+                }
+
+                &:nth-child(1) .color{
+                    background-color: #E0AEA2;
+                }
+                &:nth-child(2) .color{
+                    background-color: #C0DDED;
+                }
+                &:nth-child(3) .color{
+                    background-color: #FEDE41;
+                }
+            }
+
+            .active-picker{
+                border: 1px solid $primary-color;
+            }
+        }
+
+    }
+
+    .select-row{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
+
+        .size-input-group{
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        button{
+            display: inline-flex;
+            gap: 12px;
+        }
+    }
+
+    .action-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        button{
+            flex: 1;
+        }
+    }
+
+    .delivery-return-data-section{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .delivery-section{
+            border-bottom: 1px solid $border-color-default;
+
+            h6{
+                margin-left: 24px;
+            }
+            p{
+                margin: 12px 0;
+            }
+        }
+
+        .share-links{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .payment-options{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            gap: 16px;
+            margin: 16px 0px;
+            .payment-container{
+                background-color: $surface-bg1;
+                border: 1px solid $border-color-default;
+                border-radius: $border-radius-base;
+                width: 120px;
+                min-height: 64px;
+                height: inherit;
+                display: flex;
+                align-self: center;
+                justify-content: center ;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    
+}
+
