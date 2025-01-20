@@ -10,6 +10,7 @@ $text-secondary-color: #424551;
 $text-tertiary-color: #787A80;
 $surface-bg1: #F4F5F6;
 $button-hover-bg: #0000000b;
+$warning: #F89828;
 
 // Link
 $default-link-color: #464646;
@@ -17,30 +18,42 @@ $link-hover: #0c0c0c;
 $icon-link-hover-color: #17696a3f;
 
 // Border radius
-$border-radius-base: 4px;
+$border-radius-base: .25rem;
 $border-radius-full: 50%;
 $border-color-default: #D7DADD;
 
 // Typography Variables
-$font-family: '';
-$base-font-size: 16px;
-$sm-font-size: 12px;
-$xs-font-size: 10px;
-$md-font-size: 20px;
+$font-primary:  "Lato", serif;
+$font-secondary: 'Playfair Display', serif;
+
+$base-font-size: 1rem;
+$sm-font-size: 0.75rem;
+$xs-font-size: 0.625rem;
+$md-font-size: 1.25rem;
+
+$font-weight-light: 100;
+$font-weight-extra-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 // Spacing Variables
 $spacing-unit: 1rem;
 
-// Define Breakpoints
-$breakpoint-small: 480px;   // Mobile
-$breakpoint-medium: 768px;  // Tablet
-$breakpoint-large: 1024px;  // Desktop
-$breakpoint-extra-large: 1200px; // Large Screens
+$font-size-base: 1rem; // Base font size
+$line-height-base: 1.5;
+
+// Define the breakpoints for different screen sizes
+$breakpoint-xs: 20rem;  // Extra small screens (phones)
+$breakpoint-sm: 36rem;  // Small screens (tablets)
+$breakpoint-md: 48rem;  // Medium screens (small desktops)
+$breakpoint-lg: 62rem;  // Large screens (desktops)
+$breakpoint-xl: 75rem; // Extra large screens (large desktops)
 
 //Search Input Variables
 $search-border-color: #0c0c0c;
 $search-bg-color: #f5f5f5;
 $search-hover-border-color: #007bff;
 $icon-color: #007bff;
-$input-padding: 10px;
-$icon-size: 16px;
+$input-padding: 0.625rem;
+$icon-size: 1rem;

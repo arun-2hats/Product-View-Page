@@ -22,12 +22,12 @@
   }
   
   .star-rating label {
-    color:#ccc;
+    color: $secondary-color;
     cursor:pointer;
   }
   
   .star-rating :checked ~ label {
-    color:#f90;
+    color: $warning;
   }
   
   .star-rating label:hover,

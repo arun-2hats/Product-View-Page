@@ -1,18 +1,11 @@
 // 1. Variables
 // Define font families, sizes, and weights
-$font-primary:  "Lato", serif;
-$font-secondary: 'Playfair Display', serif;
 
-$font-size-base: 1rem; // Base font size
-$line-height-base: 1.5;
 
-$font-weight-light: 100;
-$font-weight-extra-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
-$font-weight-black: 900;
 
-$heading-color: #333;
+// $heading-color: #333;
+@import './mixins';
+@import './variables';
 
 // 2. Base Typography
 body {
@@ -34,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1 {
   font-size: 2.875rem;
   font-weight: $font-weight-black;
+
+  @include respond-to(md){
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -66,11 +63,15 @@ p {
   margin: 0 0 0;
   font-size: 1rem;
   line-height: $line-height-base;
+
+  @include respond-to(md){
+    font-size: 0.875rem;
+  }
 }
 
 // 5. Links
 a {
-  color: $heading-color;
+  color: $text-primary-color;
   text-decoration: none;
   transition: color 0.3s ease;
 

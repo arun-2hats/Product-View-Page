@@ -1,21 +1,19 @@
-.search-container {
-    // position: relative;
-    // width: 100%;
-    min-width: 300px;
-    display: flex;
-    border-bottom: 2px solid $search-border-color;
-    padding: 5px 1px;
+@import './variables';
+@import './mixins';
 
-    // Style the input
+.search-container {
+    min-width: 18.75rem;
+    display: flex;
+    border-bottom: 0.125rem solid $search-border-color;
+    padding: 0.3125rem 0.0625rem;
+
     input[type="text"] {
         width: 100%;
-        // padding: $input-padding;
-        padding-right: 30px; // Add space for the icon
+        padding-right: 1.875rem; // Add space for the icon
         border: none;
         outline: none;
         background-color: transparent;
-        // border-radius: 5px;
-        font-size: 14px;
+        font-size: 0.875rem;
         transition: border-color 0.3s ease;
 
         &:focus {

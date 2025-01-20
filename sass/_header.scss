@@ -1,6 +1,8 @@
+@import './variables';
+@import './mixins';
 
 header{
-    padding: 8px 96px;
+    padding: 0.5rem 6rem;
     nav {
         display: flex;
         justify-content: space-between;
@@ -8,14 +10,12 @@ header{
         .left-section, .right-section{
             display: flex;
             align-items: center;
-            // gap: 16px;
-
         }
 
         ul{
             list-style: none;
             display: flex;
-            gap: 24px;
+            gap: 1.5rem;
 
             li{
                 text-decoration: none;
@@ -31,8 +31,8 @@ header{
 
                 .active-link{
                     color: $primary-color;
-                    border-bottom: 2px solid $primary-color;
-                    padding: 0px 8px 24px 8px;
+                    border-bottom: 0.125rem solid $primary-color;
+                    padding: 0 0.5rem 1rem 0.5rem;
 
                     &:hover{
                         color: inherit;
@@ -40,16 +40,20 @@ header{
                 }
             }
 
+            @include respond-to(md){
+                display: none;
+            }
+
         }
 
         .right-section{
             .icon-links{
                 ul{
-                    gap: 32px;
+                    gap: 2rem;
                     
                     li{
                         a{
-                            padding: 8px;
+                            padding: .5rem;
                             border-radius: $border-radius-full;
                             display: flex;
                             align-items: center;
@@ -60,10 +64,28 @@ header{
                             }
                         }
                     }
+
+
+                    @include respond-to(lg){
+                        display: none;
+                    }
                 }
+
+                button{
+                    display: none;
+
+                    @include respond-to(lg){
+                        display: block;
+                    }
+                }
+
             }
         }
              
+    }
+            
+    @include respond-to(md){
+        padding: .5rem;
     }
 }
 
