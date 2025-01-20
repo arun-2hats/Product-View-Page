@@ -5,7 +5,7 @@ header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   flex-wrap: nowrap;
 }
 header nav .left-section, header nav .right-section {
@@ -213,7 +213,6 @@ header nav .right-section .icon-links button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: start;
-  width: 100%;
   gap: 1rem;
 }
 .preview-imgs img {

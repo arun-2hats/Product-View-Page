@@ -4,7 +4,7 @@
 header{
     padding: 0.5rem 6rem;
     nav {
-        @include flexbox(row, space-between, start);
+        @include flexbox(row, space-between, center);
 
         .left-section, .right-section{
             @include flexbox(row, start, center);

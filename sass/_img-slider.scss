@@ -35,6 +35,11 @@
             width: 100%;
             max-width: 600px;
             height: auto;
+
+            // @include respond-to(lg){
+            //     width: 100%; 
+            //     max-width: 350px;   
+            // }
         }
     }
 }
@@ -54,21 +59,25 @@
 .preview-imgs{
     @include flexbox(row, space-between, center, start);
     
-    width: 100%;
+    // width: 100%;
     gap: 1rem;
-    
+    // display: none;
     img{
         border-radius: $border-radius-base;
         width: 100%;
         max-width: 100px;
         height: auto;
+
+        // @include respond-to(lg){
+        //     width: 60px;
+        // }
     }
 
     .video-thumbnail{
         position: relative;
         .overlay{
             @include flexbox(row, center, center, start);
-            
+
             position: absolute;
             top: 0;
             left: 0;
