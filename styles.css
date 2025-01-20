@@ -566,6 +566,7 @@ select {
   border: 0.125rem solid #D7DADD;
   box-shadow: none;
   background-color: transparent;
+  cursor: pointer;
   min-width: 18.75rem;
   padding: 1rem;
   border-radius: 0.25rem;
