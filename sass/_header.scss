@@ -4,12 +4,10 @@
 header{
     padding: 0.5rem 6rem;
     nav {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(row, space-between, start);
 
         .left-section, .right-section{
-            display: flex;
-            align-items: center;
+            @include flexbox(row, start, center);
         }
 
         ul{
@@ -43,7 +41,6 @@ header{
             @include respond-to(md){
                 display: none;
             }
-
         }
 
         .right-section{
@@ -53,18 +50,16 @@ header{
                     
                     li{
                         a{
+                            @include flexbox(row, center, center);
+
                             padding: .5rem;
                             border-radius: $border-radius-full;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
 
                             &:hover{
                                 background-color: $icon-link-hover-color;
                             }
                         }
                     }
-
 
                     @include respond-to(lg){
                         display: none;
@@ -78,10 +73,8 @@ header{
                         display: block;
                     }
                 }
-
             }
         }
-             
     }
             
     @include respond-to(md){

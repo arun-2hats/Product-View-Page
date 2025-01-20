@@ -1,16 +1,13 @@
 
 .product-meta-data{
+    @include flexbox(column);
+
     width: 100%;
-    display: flex;
-    flex-direction: column; 
     gap: 1.5rem;
 
     .price-and-review{
         .price{
-            display: flex;
-            flex-direction: row;
-            align-items: start;
-            justify-content: center;
+            @include flexbox(row, center, start);
 
             h3{
                 color: $red;
@@ -29,34 +26,25 @@
             color: $text-light;
             margin-left: 1rem;
             border-radius: $border-radius-base;
-            
         }
     }
 
     .price-and-review{
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
+        @include flexbox(row, space-between, start);
     }
 
     .product-color-varient{
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-
         .color-palette{
-            display: flex;
-            align-items: center;
+            @include flexbox(row, start, start);
+
             gap: 0.5rem;
-            flex-direction: row;
             .picker{
+                @include flexbox(row, center, center);
+
                 width: 1.625rem;
                 height: 1.625rem;
                 border: 0.125rem solid $border-color-default;
                 border-radius: $border-radius-full;
-                display: grid;
-                justify-items: center;
-                align-content: center;
 
                 .color{
                     width: 1.125rem;
@@ -80,49 +68,49 @@
             }
 
             p{
-                color: $text-tertiary-color;      
+                color: $text-tertiary-color;     
             }
+        }
+
+        p{
+            margin-bottom: 1rem;
         }
 
     }
 
     .select-row{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-between;
-        gap: 1rem;
         width: 100%;
 
         .size-input-group{
-            
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+            @include flexbox(row, space-between, center);
+
             width: 100%;
         }
         button{
             display: inline-flex;
             gap: 0.75rem;
         }
+
+        p{
+            margin-bottom: 1rem;
+        }
     }
 
     .action-links{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include flexbox(row, space-between, center);
+
         gap: 1rem;
+
         button{
             flex: 1;
         }
     }
 
     .delivery-return-data-section{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column, space-between, stretch);
+
         gap: 1rem;
+
 
         .delivery-section{
             border-bottom: 1px solid $border-color-default;
@@ -136,16 +124,14 @@
         }
 
         .share-links{
-            display: flex;
-            flex-direction: row;
+            @include flexbox(row, start, center);
+
             gap: 1rem;
-            align-items: center;
         }
 
         .payment-options{
-            display: flex;
-            flex-direction: row;
-            align-items: start;
+            @include flexbox(row, start, center);
+            
             gap: 1rem;
             margin: 1rem 0;
             .payment-container{
@@ -155,9 +141,6 @@
                 width: 7.5rem;
                 min-height: 4rem;
                 height: inherit;
-                display: flex;
-                align-self: center;
-                justify-content: center ;
                 cursor: pointer;
             }
         }

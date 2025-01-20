@@ -17,7 +17,7 @@ table{
     width: 100%;
     
     tr{
-        border-bottom: 1px solid $border-color-default;
+        border-bottom: 0.125rem solid $border-color-default;
         font-size: $base-font-size;
     }
 
@@ -37,8 +37,8 @@ select {
     border: 0.125rem solid $border-color-default;
     box-shadow: none;
     background-color: transparent;
-    cursor: pointer;
-    min-width: 300px;
+    // cursor: pointer;
+    min-width: 18.75rem;
     padding: 1rem;
     border-radius: $border-radius-base;
 }
@@ -54,17 +54,14 @@ select {
 }
 
 .btn{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(row, center, center);
+    gap: .2 5rem;
+
     text-align: center;
-    gap: 0.5px;
     border-radius: $border-radius-base;
     border: none;
     cursor: pointer;
     padding: 1rem;
-
     &:hover{
         background-color: $button-hover-bg;
     }
@@ -95,7 +92,6 @@ select {
 .tab-btn{
     background: transparent;
     color: $text-tertiary-color;
-    
 }
 
 .icon-btn{

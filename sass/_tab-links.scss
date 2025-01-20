@@ -1,9 +1,8 @@
 .tab-links{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 1rem;
     border-bottom: 1px solid $border-color-default;
     padding-bottom: 1rem;
+
+    @include flexbox(row, start, center);
 }
 
