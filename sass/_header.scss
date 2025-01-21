@@ -1,6 +1,8 @@
 
 header{
-    padding: 0.5rem 6rem;
+    // padding: 0.5rem 6rem;
+    font-family: $font-secondary;
+
     nav {
         @include flexbox(row, space-between, center);
 
@@ -11,7 +13,7 @@ header{
         ul{
             list-style: none;
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
 
             li{
                 text-decoration: none;
@@ -22,6 +24,8 @@ header{
 
                     &:hover{
                         color: $link-hover;
+                        font-weight: $font-weight-bold;
+
                     }
                 }
 
@@ -29,6 +33,7 @@ header{
                     color: $primary-color;
                     border-bottom: 0.125rem solid $primary-color;
                     padding: 0 0.5rem 1rem 0.5rem;
+                    font-weight: $font-weight-bold;
 
                     &:hover{
                         color: inherit;
@@ -42,16 +47,22 @@ header{
         }
 
         .right-section{
+            .search-container{
+                button{
+                    border: none;
+                    background: none;
+                    
+                }
+            }
             .icon-links{
                 ul{
-                    gap: 2rem;
-                    
                     li{
                         a{
                             @include flexbox(row, center, center);
-
+                            font-size: $md-font-size;
                             padding: .5rem;
                             border-radius: $border-radius-full;
+                            text-decoration: none;
 
                             &:hover{
                                 background-color: $icon-link-hover-color;

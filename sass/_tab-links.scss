@@ -1,6 +1,6 @@
 .tab-links{
     gap: 1rem;
-    border-bottom: 0.125rem solid $border-color-default;
+    border-bottom: 0.1rem solid $border-color-default;
     padding-bottom: 1rem;
 
     @include flexbox(row, start, center);

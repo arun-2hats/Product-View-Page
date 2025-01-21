@@ -11,6 +11,14 @@
 @import './tab-links';
 @import './subscribe-section';
 
+main{
+    max-width: 77rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 table{
     color: $text-secondary-color;
     border-collapse: collapse;
@@ -32,6 +40,7 @@ table{
     }
 }
 
+
 // Inputs
 select {
     border: 0.125rem solid $border-color-default;
@@ -49,11 +58,12 @@ select {
 }
 
 
+
 .input, .input-number{
     padding: 1rem;
     border-radius: $border-radius-base;
     border: 0.125rem solid $border-color-default;
-
+    max-width: 100px;
     @include respond-to(md){
         padding: 0.5rem;
     }
@@ -92,7 +102,7 @@ select {
 
 .secondary-btn, .active-tab-btn{
     background: transparent;
-    border: 0.125rem solid $primary-color !important; 
+    border: 0.1rem solid $primary-color !important; 
     border-style: inset;
     color: $primary-color;
 }
@@ -126,9 +136,17 @@ select {
 }
 
 section{
-    padding: 0 6rem;
+    // padding: 0 6rem;
+
+    .main-heading{
+        margin-top: 3rem;
+    }
 
     @include respond-to(md){
         padding: 0.5rem;
+
+        .main-heading{
+            margin-top: 1.5rem;
+        }
     }
 }

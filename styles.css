@@ -148,7 +148,7 @@ a:hover, a:focus {
 }
 
 header {
-  padding: 0.5rem 6rem;
+  font-family: "Raleway", serif;
 }
 header nav {
   display: flex;
@@ -167,7 +167,7 @@ header nav .left-section, header nav .right-section {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 header nav ul li {
   text-decoration: none;
@@ -178,11 +178,13 @@ header nav ul li .link {
 }
 header nav ul li .link:hover {
   color: #0c0c0c;
+  font-weight: 700;
 }
 header nav ul li .active-link {
   color: #17696A;
   border-bottom: 0.125rem solid #17696A;
   padding: 0 0.5rem 1rem 0.5rem;
+  font-weight: 700;
 }
 header nav ul li .active-link:hover {
   color: inherit;
@@ -192,8 +194,9 @@ header nav ul li .active-link:hover {
     display: none;
   }
 }
-header nav .right-section .icon-links ul {
-  gap: 2rem;
+header nav .right-section .search-container button {
+  border: none;
+  background: none;
 }
 header nav .right-section .icon-links ul li a {
   display: flex;
@@ -201,8 +204,10 @@ header nav .right-section .icon-links ul li a {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  font-size: 1.25rem;
   padding: 0.5rem;
   border-radius: 50%;
+  text-decoration: none;
 }
 header nav .right-section .icon-links ul li a:hover {
   background-color: rgba(23, 105, 106, 0.2470588235);
@@ -271,8 +276,7 @@ header nav .right-section .icon-links button {
   margin: 1rem;
 }
 .product-details .product-img img {
-  width: 100%;
-  max-width: 37.5rem;
+  max-width: 100%;
   height: auto;
 }
 
@@ -280,9 +284,9 @@ header nav .right-section .icon-links button {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: normal;
   flex-wrap: start;
-  width: 37.5rem;
+  width: 83.5rem;
   gap: 0.5rem;
 }
 @media (max-width: 48rem) {
@@ -330,10 +334,9 @@ header nav .right-section .icon-links button {
 }
 
 .search-container {
-  min-width: 15.625rem;
+  max-width: 15.625rem;
   display: flex;
   border-bottom: 0.125rem solid #0c0c0c;
-  padding: 0.3125rem 0.0625rem;
 }
 .search-container input[type=text] {
   width: 100%;
@@ -538,7 +541,7 @@ header nav .right-section .icon-links button {
 
 .tab-links {
   gap: 1rem;
-  border-bottom: 0.125rem solid #D7DADD;
+  border-bottom: 0.1rem solid #D7DADD;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: row;
@@ -555,6 +558,14 @@ header nav .right-section .icon-links button {
   justify-content: end;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+main {
+  max-width: 77rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 table {
@@ -595,6 +606,7 @@ select {
   padding: 1rem;
   border-radius: 0.25rem;
   border: 0.125rem solid #D7DADD;
+  max-width: 100px;
 }
 @media (max-width: 48rem) {
   .input, .input-number {
@@ -636,7 +648,7 @@ select {
 
 .secondary-btn, .active-tab-btn {
   background: transparent;
-  border: 0.125rem solid #17696A !important;
+  border: 0.1rem solid #17696A !important;
   border-style: inset;
   color: #17696A;
 }
@@ -669,12 +681,15 @@ select {
   background: none;
 }
 
-section {
-  padding: 0 6rem;
+section .main-heading {
+  margin-top: 3rem;
 }
 @media (max-width: 48rem) {
   section {
     padding: 0.5rem;
+  }
+  section .main-heading {
+    margin-top: 1.5rem;
   }
 }
 

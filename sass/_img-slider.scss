@@ -34,8 +34,8 @@
         }
 
         img{
-            width: 100%;
-            max-width: 37.5rem;
+            max-width: 100%;
+            // width: 37.5rem;
             height: auto;
 
         }
@@ -43,9 +43,9 @@
 }
 
 .img-slider{
-    @include flexbox(column, start, center, start);
+    @include flexbox(column, start, normal, start);
 
-    width: 37.5rem;
+    width: 83.5rem;
     gap: .5rem;
 
     @include respond-to(md){
