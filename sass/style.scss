@@ -1,15 +1,15 @@
-@import './variables';
-@import './header';
-@import './search-input';
 @import './font';
+@import './variables';
+@import './mixins';
+@import './typography';
+
+@import './header';
 @import './img-slider';
+@import './search-input';
 @import './rating';
 @import './product-data';
 @import './tab-links';
 @import './subscribe-section';
-@import './typography';
-@import './variables';
-@import './mixins';
 
 table{
     color: $text-secondary-color;
@@ -38,44 +38,53 @@ select {
     box-shadow: none;
     background-color: transparent;
     cursor: pointer;
-    min-width: 18.75rem;
+    max-width: 18.75rem;
+    min-width: 50%;
     padding: 1rem;
     border-radius: $border-radius-base;
+
+    @include respond-to(md){
+        padding: 0.5rem;
+    }
 }
 
-.input{
+
+.input, .input-number{
     padding: 1rem;
     border-radius: $border-radius-base;
     border: 0.125rem solid $border-color-default;
-}
 
-.input-number{
-    width: 6.25rem;
+    @include respond-to(md){
+        padding: 0.5rem;
+    }
 }
 
 .btn{
     @include flexbox(row, center, center);
-    gap: .2 5rem;
-
+    gap: .25rem;
     text-align: center;
     border-radius: $border-radius-base;
     border: none;
     cursor: pointer;
     padding: 1rem;
+
+    @include respond-to(md){
+        // font-size: $xs-font-size;
+        padding: 0.5rem;
+    }
+
     &:hover{
         background-color: $button-hover-bg;
     }
 
-    @include respond-to(xs){
-        
-    }
 
 }
 
 .primary-btn{
     background: $primary-color;
     color: $text-light;
-
+    border: 0.125rem solid $primary-color !important; 
+    min-width: 6.25rem;
     &:hover{
         background-color: none;
     }
@@ -84,6 +93,7 @@ select {
 .secondary-btn, .active-tab-btn{
     background: transparent;
     border: 0.125rem solid $primary-color !important; 
+    border-style: inset;
     color: $primary-color;
 }
 

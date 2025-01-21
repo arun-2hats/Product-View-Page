@@ -1,5 +1,3 @@
-@import './mixins';
-@import './variables';
 
 // 2. Base Typography
 body {
@@ -30,6 +28,10 @@ h1, .h1 {
 h2 {
   font-size: 2rem;
   font-weight: $font-weight-bold;
+
+  @include respond-to(md){
+    font-size: 1rem;
+  }
 }
 
 h3 {
