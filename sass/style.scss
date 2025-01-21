@@ -79,7 +79,6 @@ select {
     padding: 1rem;
 
     @include respond-to(md){
-        // font-size: $xs-font-size;
         padding: 0.5rem;
     }
 
@@ -134,8 +133,6 @@ select {
 }
 
 section{
-    // padding: 0 6rem;
-
     .main-heading{
         margin-top: 3rem;
     }
