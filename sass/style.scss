@@ -86,8 +86,6 @@ select {
     &:hover{
         background-color: $button-hover-bg;
     }
-
-
 }
 
 .primary-btn{
@@ -96,7 +94,7 @@ select {
     border: 0.125rem solid $primary-color !important; 
     min-width: 6.25rem;
     &:hover{
-        background-color: none;
+        background-color: $primary-color-hover;
     }
 }
 

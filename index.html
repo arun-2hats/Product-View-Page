@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/24b85d46e0/UntitledProject/style.css">
+    <link fetchpriority="high" rel="stylesheet" href="https://i.icomoon.io/public/temp/24b85d46e0/UntitledProject/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -30,9 +30,9 @@
                 <div class="left-section">
                     <img width="41" height="41" src="./assets/logo transparent.svg" alt="site-logo">
                     <ul>
-                        <li><a tabindex="1" class="link active-link " href="#">WOMEN</a></li>
-                        <li><a tabindex="2" class="link" href="#">MEN</a></li>
-                        <li><a tabindex="3" class="link" href="#">KIDS</a></li>
+                        <li><a aria-label="womens links" tabindex="1" class="link active-link " href="#">WOMEN</a></li>
+                        <li><a aria-label="mens links" tabindex="2" class="link" href="#">MEN</a></li>
+                        <li><a aria-label="kids links" tabindex="3" class="link" href="#">KIDS</a></li>
                     </ul>
                 </div>
                 <div class="right-section">
@@ -75,7 +75,7 @@
                 <!-- Product Image slides -->
                 <div class="img-slider">
                     <div class="product-img ">
-                        <img loading="eager" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
+                        <img fetchpriority="high" loading="eager" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
                         <div class="slider-navs">
                             <button tabindex="12" aria-label="Previous" class="btn icon-btn" ><img width="20" height="20" src="./assets/Left.svg" alt="left-arrow"></button>
                             <button tabindex="13" aria-label="Next" class="btn icon-btn"><img width="20" height="20" src="./assets/Right.svg" alt="right-arrow"></button>
@@ -172,7 +172,7 @@
                     <div class="delivery-return-data-section">
                         <div class="delivery-section">
                             <h6 class="lato-bold">Delivery</h6>
-                            <p>Free standard shipping on orders over $35 before tax, plus free returns.</p>
+                            <p>Free standard shipping on orders <b>over $35</b> before tax, plus free returns.</p>
                             <table>
                                 <tr>
                                     <th>TYPE</th>
@@ -215,7 +215,7 @@
     
                         <div class="delivery-section">
                             <h6 class="lato-bold">Return</h6>
-                            <p>You have 60 days to return the item(s) using any of the following methods:</p>
+                            <p>You have <b>60 days</b> to return the item(s) using any of the following methods:</p>
                             <ul>
                                 <li><p class="p-secondary">Free store return</p></li>
                                 <li><p class="p-secondary">Free returns via USPS Dropoff Service</p></li>
