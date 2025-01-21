@@ -78,7 +78,7 @@ header nav .right-section .icon-links button {
 }
 
 .search-container {
-  min-width: 18.75rem;
+  min-width: 15.625rem;
   display: flex;
   border-bottom: 0.125rem solid #0c0c0c;
   padding: 0.3125rem 0.0625rem;
@@ -95,6 +95,11 @@ header nav .right-section .icon-links button {
 .search-container input[type=text]:focus {
   border-color: #007bff;
   outline: none;
+}
+@media (max-width: 36rem) {
+  .search-container {
+    display: none;
+  }
 }
 
 .lato-thin {
@@ -598,7 +603,6 @@ select {
 .btn:hover {
   background-color: rgba(0, 0, 0, 0.0431372549);
 }
-
 .primary-btn {
   background: #17696A;
   color: white;

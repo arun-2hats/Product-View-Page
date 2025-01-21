@@ -2,7 +2,7 @@
 @import './mixins';
 
 .search-container {
-    min-width: 18.75rem;
+    min-width: 15.625rem;
     display: flex;
     border-bottom: 0.125rem solid $search-border-color;
     padding: 0.3125rem 0.0625rem;
@@ -20,5 +20,9 @@
             border-color: $search-hover-border-color;
             outline: none;
         }
+    }
+
+    @include respond-to(sm){
+        display: none;
     }
 }

@@ -66,6 +66,10 @@ select {
         background-color: $button-hover-bg;
     }
 
+    @include respond-to(xs){
+        
+    }
+
 }
 
 .primary-btn{
