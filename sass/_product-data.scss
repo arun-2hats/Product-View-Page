@@ -9,7 +9,7 @@
         .price{
             @include flexbox(row, center, start);
 
-            h3{
+            h2{
                 color: $red;
 
                 span{

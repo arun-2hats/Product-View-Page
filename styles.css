@@ -83,7 +83,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -98,9 +98,9 @@ h5 {
   font-weight: 100;
 }
 
-h6 {
+h6, .h6 {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 700;
 }
 
 p {
@@ -379,7 +379,7 @@ header nav .right-section .icon-links button {
 
 /* component */
 .rating p {
-  color: #787A80;
+  color: #74747B;
 }
 
 .star-rating {
@@ -426,12 +426,12 @@ header nav .right-section .icon-links button {
   align-items: start;
   flex-wrap: nowrap;
 }
-.product-meta-data .price-and-review .price h3 {
+.product-meta-data .price-and-review .price h2 {
   color: #DB0000;
 }
-.product-meta-data .price-and-review .price h3 span {
+.product-meta-data .price-and-review .price h2 span {
   text-decoration: line-through;
-  color: #787A80;
+  color: #74747B;
   font-size: 1.25rem;
 }
 .product-meta-data .price-and-review .percentage-tag {
@@ -485,7 +485,7 @@ header nav .right-section .icon-links button {
   border: 0.125rem solid #17696A;
 }
 .product-meta-data .product-color-varient .color-palette p {
-  color: #787A80;
+  color: #74747B;
 }
 .product-meta-data .product-color-varient p {
   margin-bottom: 1rem;
@@ -603,7 +603,7 @@ table td, table th {
 }
 table th {
   font-size: 0.75rem;
-  color: #787A80;
+  color: #74747B;
 }
 
 select {
@@ -681,7 +681,7 @@ select {
 
 .tab-btn {
   background: transparent;
-  color: #787A80;
+  color: #74747B;
 }
 
 .icon-btn {
