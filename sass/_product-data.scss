@@ -79,8 +79,6 @@
     }
 
     .select-row{
-        // width: 100%;
-
         .size-input-group{
             @include flexbox(row, space-between, center);
         }
@@ -98,9 +96,6 @@
         @include flexbox(row, space-between, center, wrap);
 
         gap: 1rem;
-        // input{
-        //     width: 1rem;
-        // }
         button{
             flex: 1;
         }
