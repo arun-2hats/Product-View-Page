@@ -1,12 +1,23 @@
 
 header{
     font-family: $font-secondary;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 77rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: $bg-nuetral;
+    z-index: 9;
     nav {
         @include flexbox(row, space-between, center);
 
         .left-section, .right-section{
             @include flexbox(row, start, center);
+            gap: 1rem;
         }
 
         ul{
@@ -83,7 +94,7 @@ header{
                 }
             }
         }
-        
+
     }
             
     @include respond-to(md){

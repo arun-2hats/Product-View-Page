@@ -134,14 +134,14 @@ select {
 
 section{
     .main-heading{
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
 
     @include respond-to(md){
         padding: 0.5rem;
 
         .main-heading{
-            margin-top: 1.5rem;
+            margin-top: 3.5rem;
         }
     }
 }
