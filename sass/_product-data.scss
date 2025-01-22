@@ -3,15 +3,15 @@
     @include flexbox(column);
 
     width: 100%;
-    gap: 1.5rem;
+    gap: 0.5rem;
 
     .price-and-review{
         .price{
-            @include flexbox(row, center, start);
+            @include flexbox(row, center, center);
 
             h2{
                 color: $red;
-
+                margin: 0;
                 span{
                     text-decoration: line-through;
                     color: $secondary-text-color;
@@ -22,9 +22,9 @@
 
         .percentage-tag{
             background-color: $red;
-            padding: 0.125rem 0.25rem;
+            padding: .1rem 0.5rem;
             color: $text-light;
-            margin-left: 1rem;
+            margin-left: 2.5rem;
             border-radius: $border-radius-base;
         }
     }
@@ -68,7 +68,7 @@
             }
 
             p{
-                color: $text-tertiary-color;     
+                color: $text-secondary-color;     
             }
         }
 
@@ -76,6 +76,17 @@
             margin-bottom: 1rem;
         }
 
+    }
+
+    .form-inputs{
+        @include flexbox(column, space-between, normal);
+        gap: 2rem;
+
+        margin-top: 1.5rem;
+
+        button{
+            font-weight: $font-weight-bold;
+        }
     }
 
     .select-row{
@@ -88,30 +99,38 @@
         }
 
         p{
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
         }
     }
 
     .action-links{
-        @include flexbox(row, space-between, center, wrap);
+        width: 100%;
+        @include flexbox(row, start, center, wrap);
+        gap: 1.5rem;
 
-        gap: 1rem;
+        .action-link-btn-grp1{
+            width: 21.75rem;
+            @include flexbox(row, start, center);
+            gap: 1.5rem;
+            button{
+                flex: 1;
+            }
+        }
+
         button{
-            flex: 1;
+            // width: 100%;
         }
     }
 
     .delivery-return-data-section{
         @include flexbox(column, space-between, stretch);
-
         gap: 1rem;
-
 
         .delivery-section{
             border-bottom: 1px solid $border-color-default;
 
-            h6{
-                margin-left: 1rem;
+            h3{
+                margin-left: 1.5rem;
             }
             p{
                 margin: 0.75rem 0;
@@ -120,8 +139,11 @@
 
         .share-links{
             @include flexbox(row, start, center);
-
             gap: 1rem;
+            button{
+                padding: 0;
+            }
+            // gap: .5rem;
         }
 
         .payment-options{
@@ -131,7 +153,7 @@
             margin: 1rem 0;
             .payment-container{
                 background-color: $surface-bg1;
-                border: 0.125rem solid $border-color-default;
+                border: 0.1rem solid $border-color-default;
                 border-radius: $border-radius-base;
                 width: 7.5rem;
                 min-height: 4rem;

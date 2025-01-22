@@ -2,13 +2,14 @@
 .rating{
     p{
         color: $text-tertiary-color;
+        font-size: $sm-font-size;
     }
 }
 .star-rating {
     @include flexbox(row-reverse, space-around, start);
-
-    font-size: 1.25rem;
-    width:5em;
+    gap: .15rem;
+    font-size: 0.25rem;
+    // width:5em;
 }
   
   .star-rating input {
@@ -22,9 +23,15 @@
   
   .star-rating :checked ~ label {
     color: $warning;
+    &::before{
+      background-image: url(../assets/Star/filled.svg);
+    }
   }
   
   .star-rating label:hover,
   .star-rating label:hover ~ label {
-    color:#fc0;
+    // color:#fc0;
+    &::before{
+      background-image: url(../assets/Star/filled.svg);
+    }
   }

@@ -2,8 +2,8 @@
 .product-details{
     @include flexbox(row);
 
-    gap: 6rem;
-    padding-top: 2.5rem;
+    gap: 8rem;
+    padding-top: 2rem;
 
     @include respond-to(md){
         gap: 2rem;

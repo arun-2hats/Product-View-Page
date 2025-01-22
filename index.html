@@ -30,7 +30,7 @@
                 <div class="left-section">
                     <img width="41" height="41" src="./assets/logo transparent.svg" alt="site-logo">
                     <ul>
-                        <li><a aria-label="womens links" tabindex="1" class="link active-link " href="#">WOMEN</a></li>
+                        <li class="active-link "><a class="link" aria-label="womens links" tabindex="1" href="#">WOMEN</a></li>
                         <li><a aria-label="mens links" tabindex="2" class="link" href="#">MEN</a></li>
                         <li><a aria-label="kids links" tabindex="3" class="link" href="#">KIDS</a></li>
                     </ul>
@@ -111,66 +111,73 @@
     
                         <div class="rating text-end">
                             <div class="star-rating text-center">
-                                <input aria-label="5 stars" type="radio" id="5-stars" name="rating" value="5" />
-                                <label for="5-stars" class="star">&#9733;</label>
-                                <input aria-label="4 stars" type="radio" id="4-stars" name="rating" value="4" />
-                                <label for="4-stars" class="star">&#9733;</label>
-                                <input aria-label="3 stars" type="radio" id="3-stars" name="rating" value="3" />
-                                <label for="3-stars" class="star">&#9733;</label>
-                                <input aria-label="2 stars" type="radio" id="2-stars" name="rating" value="2" />
-                                <label for="2-stars" class="star">&#9733;</label>
-                                <input aria-label="1 star" type="radio" id="1-star" name="rating" value="1" />
-                                <label for="1-star" class="star">&#9733;</label>
+                                <label for="5-stars" class="star"><img src="./assets/Star/outline.svg" alt=""></label>
+                                <label for="4-stars" class="star"><img src="./assets/Star/filled.svg" alt=""></label>
+                                <label for="3-stars" class="star"><img src="./assets/Star/filled.svg" alt=""></label>
+                                <label for="2-stars" class="star"><img src="./assets/Star/filled.svg" alt=""></label>
+                                <label for="1-star" class="star"><img src="./assets/Star/filled.svg" alt=""></label>
                             </div>
                             <p class="p-tertiary">12 reviews</p>
                         </div>
                     </div>
-    
-                    <div class="product-color-varient">
-                        <p class="p-secondary">Colors</p>
-                        <div class="color-palette">
-                            <button aria-label="pnik color button" tabindex="19" class="picker active-picker color-btn">
-                                <div class="color"></div>
-                            </button>
-                            <button aria-label="blue color button" tabindex="20" class="picker color-btn">
-                                <div class="color"></div>
-                            </button>
-                            <button aria-label="yellow color button" tabindex="21" class="picker color-btn">
-                                <div class="color"></div>
-                            </button>
-                            <p class="p-tertiary">Pink</p>
+
+                    <form>
+                        <div class="product-color-varient">
+                            <p class="p-secondary">Color</p>
+                            <div class="color-picker">
+                                <label>
+                                  <input type="radio" name="color" value="red" />
+                                  <span class="color-box red"></span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="color" value="green" />
+                                  <span class="color-box green"></span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="color" value="blue" />
+                                  <span class="color-box blue"></span>
+                                </label>
+                                <p class="p-tertiary">Pink</p>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-inputs">
+                            <div class="select-row">
+                                <p class="p-secondary ">Size</p>     
+                                <div class="size-input-group">
+                                    <select tabindex="22"  aria-label="Size" name="size" id="size" class="pointer">
+                                        <option value="XS">XS</option>
+                                        <option value="SM">SM</option>
+                                        <option value="MD">MD</option>
+                                        <option value="LG">LG</option>
+                                    </select>
+                                    <button tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold">
+                                        <span class="icon-hanger"></span> Size Chart
+                                    </button>
+                                </div>  
+                            </div>
     
-                    <div class="select-row">
-                        <p class="p-secondary ">Size</p>     
-    
-                        <div class="size-input-group">
-                            <select tabindex="22"  aria-label="Size" name="size" id="size" class="pointer">
-                                <option value="XS">XS</option>
-                                <option value="SM">SM</option>
-                                <option value="MD">MD</option>
-                                <option value="LG">LG</option>
-                            </select>
-                            <button tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold">
-                                <span class="icon-hanger"></span> Size Chart
-                            </button>
+                            <div class="action-links">
+                                <div class="action-link-btn-grp1">
+                                    <!-- Quantity Input -->
+                                    <input min="0" tabindex="24" aria-label="Input Quantity" class="input input-number" type="number" />
+                                    <!-- Add to Cart -->
+                                    <button tabindex="25"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
+                                        <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                                
+                                <!-- Favourite -->
+                                <button tabindex="26" aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
+                                    <img width="20" height="20" src="./assets/outline.svg" alt="wishlist-icon">
+                                    Favourite
+                                </button>
                         </div>
-                        
-                    </div>
-    
-                    <div class="action-links">
-                        <!-- Quantity Input -->
-                         <input min="0" tabindex="24" aria-label="Input Quantity" class="input input-number" type="number" />
-                        <!-- Add to Cart -->
-                         <button tabindex="25"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
-                            <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
-                            Add To Cart</button>
-                        <!-- Favourite -->
-                         <button tabindex="26" aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
-                            <img width="20" height="20" src="./assets/outline.svg" alt="wishlist-icon">
-                            Favourite</button>
-                    </div>
+                            </div>
+                            
+
+                    </form>
     
                     <div class="delivery-return-data-section">
                         <div class="delivery-section">

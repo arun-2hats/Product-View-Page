@@ -12,21 +12,34 @@ header{
     padding-right: 1rem;
     background-color: $bg-nuetral;
     z-index: 9;
+
+    @include flexbox(row, space-between, stretch);
+
     nav {
-        @include flexbox(row, space-between, center);
+        @include flexbox(row, space-between, stretch);
+        width: 100%;
+        min-height: 5rem;
+
+        @include respond-to(md){
+            min-height: 3rem;
+        }
 
         .left-section, .right-section{
             @include flexbox(row, start, center);
-            gap: 1rem;
+            // gap: 1rem;
         }
 
         ul{
             list-style: none;
             display: flex;
-            gap: 1rem;
+            // gap: 1rem;
+            height: 100%;
 
             li{
+                @include flexbox(row, center, center);
                 text-decoration: none;
+                padding: 0px 1rem;
+                padding-bottom: .5rem;
 
                 .link{
                     text-decoration: none;
@@ -39,15 +52,20 @@ header{
                     }
                 }
 
-                .active-link{
-                    color: $primary-color;
-                    border-bottom: 0.125rem solid $primary-color;
-                    padding: 0 0.5rem 1rem 0.5rem;
-                    font-weight: $font-weight-bold;
+                
+            }
 
-                    &:hover{
-                        color: inherit;
-                    }
+            .active-link{
+                border-bottom: 0.125rem solid $primary-color;
+                // padding: 0 0.5rem 1rem 0.5rem;
+                font-weight: $font-weight-bold;
+                // border-bottom: 1px solid #17696a;
+                a{
+                    color: $primary-color;
+                }
+
+                &:hover{
+                    color: inherit;
                 }
             }
 
@@ -57,6 +75,7 @@ header{
         }
 
         .right-section{
+            gap: 2rem;
             .search-container{
                 button{
                     border: none;
@@ -66,11 +85,16 @@ header{
             }
             .icon-links{
                 ul{
+                    gap: 2.5rem;
+                    padding: 0;
+
                     li{
+                    padding: 0;
+                        
                         a{
                             @include flexbox(row, center, center);
                             font-size: $md-font-size;
-                            padding: .5rem;
+                            // padding: .5rem;
                             border-radius: $border-radius-full;
                             text-decoration: none;
 

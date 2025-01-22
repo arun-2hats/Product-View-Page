@@ -23,6 +23,7 @@ table{
     color: $text-secondary-color;
     border-collapse: collapse;
     width: 100%;
+    font-family: $font-primary;
     
     tr{
         border-bottom: 0.125rem solid $border-color-default;
@@ -43,18 +44,29 @@ table{
 
 // Inputs
 select {
-    border: 0.125rem solid $border-color-default;
+    border: 0.1rem solid $border-color-default;
     box-shadow: none;
     background-color: transparent;
     cursor: pointer;
-    max-width: 18.75rem;
-    min-width: 50%;
+    min-width: 21.75rem;
+    // min-width: 50%;
     padding: 1rem;
     border-radius: $border-radius-base;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-image: url("../assets/Down-chevron.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
 
     @include respond-to(md){
-        padding: 0.5rem;
+        padding: 1rem;
+        min-width: 10.75rem;
+
     }
+
+        
 }
 
 
@@ -62,11 +74,23 @@ select {
 .input, .input-number{
     padding: 1rem;
     border-radius: $border-radius-base;
-    border: 0.125rem solid $border-color-default;
+    border: 0.1rem solid $border-color-default;
     max-width: 100px;
     @include respond-to(md){
-        padding: 0.5rem;
+        padding: 1rem;
     }
+}
+
+.input-number{
+   width: 5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 .btn{
@@ -76,10 +100,13 @@ select {
     border-radius: $border-radius-base;
     border: none;
     cursor: pointer;
-    padding: 1rem;
+    padding: .75rem 1rem;
+    font-size: $sm-font-size;
 
     @include respond-to(md){
-        padding: 0.5rem;
+        padding: 1rem;
+        border: none;
+        font-size: $sm-font-size;
     }
 
     &:hover{
@@ -102,6 +129,8 @@ select {
     border: 0.1rem solid $primary-color !important; 
     border-style: inset;
     color: $primary-color;
+    font-size: $base-font-size !important; 
+
 }
 
 .ghost-btn{
@@ -113,6 +142,7 @@ select {
 .tab-btn{
     background: transparent;
     color: $text-tertiary-color;
+    font-size: $base-font-size !important; 
 }
 
 .icon-btn{
@@ -134,7 +164,7 @@ select {
 
 section{
     .main-heading{
-        margin-top: 7rem;
+        margin-top: 10.5rem;
     }
 
     @include respond-to(md){
@@ -145,3 +175,65 @@ section{
         }
     }
 }
+
+/* Basic styling */
+.color-picker {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    p{
+        margin: 0 !important;
+        color: $text-tertiary-color;
+        margin-left: .5rem !important;
+    }
+}
+
+.color-picker label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Hide radio buttons */
+.color-picker input[type="radio"] {
+    display: none;
+}
+
+/* Color boxes */
+.color-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    transition: transform 0.2s, border 0.2s;
+    box-shadow: $border-color-default 0px 1px 0px, $border-color-default 0px 0px 0px 2px;
+}
+
+.color-box.red {
+    background-color: #e0aea2;
+}
+
+.color-box.green {
+    background-color: #c0dded;
+}
+
+.color-box.blue {
+    background-color: #fede41;
+}
+
+.color-box.yellow {
+    background-color: yellow;
+}
+
+/* Highlight selected color */
+.color-picker input[type="radio"]:checked + .color-box {
+    border-color: #ffffff;
+    box-shadow: $primary-color 0px 1px 4px, $primary-color 0px 0px 0px 1px;
+}
+
+// .form-inputs{
+//     @include flexbox(column, start, center);
+//     gap: 1rem;
+// }
