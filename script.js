@@ -47,4 +47,3 @@ popUpClose.addEventListener('click', (event) => {
 
   togglePopUpVisibility('none')
 })
-// 71747F
