@@ -1,3 +1,4 @@
+
 const sizeButton = document.getElementById('size-btn');
 const popUpOverlay = document.getElementById('pop-up-overlay');
 const popUpClose = document.getElementById('pop-up-close');
@@ -24,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('keydown', (event) => {
   // Check for the desired key combination (Ctrl + Shift + F)
-  console.log('event detected')
 
   if (event.ctrlKey && event.shiftKey && event.key === 'F') {
     console.log('event detected')
@@ -47,5 +47,4 @@ popUpClose.addEventListener('click', (event) => {
 
   togglePopUpVisibility('none')
 })
-
-console.log("script worked")
+// 71747F
