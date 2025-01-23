@@ -10,6 +10,7 @@
 @import './product-data';
 @import './tab-links';
 @import './subscribe-section';
+@import './size-popup';
 
 main{
     max-width: 77rem;
@@ -115,6 +116,12 @@ input::-webkit-inner-spin-button {
     
     &:hover{
         background-color: $button-hover-bg;
+    }
+
+    sup{
+        font-size: .7rem;
+        margin-top: -1rem;
+
     }
     @include respond-to(md){
         padding: .6rem 1rem;

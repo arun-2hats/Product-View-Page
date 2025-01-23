@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <!-- <link rel="manifest" href="/site.webmanifest"> -->
     
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/83961a38bd/UntitledProject/style.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/b5c7807d1d/UntitledProject/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -158,9 +158,10 @@
                                 </select>
                               </div>
                               <div class="col button-col size-btn ">
-                                <button tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold ">
+                                <button id="size-btn" tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold ">
                                     <span class="icon-hanger"></span> Size Chart
                                 </button>
+                                
                               </div>
                             </div>
                           
@@ -262,6 +263,88 @@
                 </div>
             </div>
         </section>
+
+        <!-- Size Pop Up -->
+        <div id="pop-up-overlay" class="size-component-wrapper">
+            <div class="pop-up-content">
+                <div class="pop-up-header">
+                    <h4>Size Chart</h4>
+                    <button aria-label="close pop up" class="primary-btn btn">close</button>
+                </div>
+
+                <div class="pop-up-content-wrapper">
+                    <div class="table-contatiner">
+                        <table>
+                            <tr>
+                                <th>Size</th>
+                                <th>Chest/Bust</th>
+                                <th>Brand Size</th>
+                                <th>Shoulder</th>
+                                <th>Length</th>
+                                <th>Sleeve Length</th>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>16.5</td>
+                                <td>27</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>28</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>16.5</td>
+                                <td>27</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>28</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>16.5</td>
+                                <td>27</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>28</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="size-description">
+                        <p><b>Sleeve: </b>Measure from the shoulder seam through the outer arm to the cuff/hem.</p>
+                        <p><b>Shoulder: </b>Measure the shoulder at the back.</p>
+                        <p><b>Length: </b>Measure from the highest point of the shoulder seam to the bottom hem of the garment.</p>
+                        <p><b>Chest: </b>Measure around the body under the arms at the fullest part of the chest with your arms relaxed at both sides.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </main>
     
 

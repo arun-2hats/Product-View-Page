@@ -1,3 +1,16 @@
+const sizeButton = document.getElementById('size-btn');
+const popUpOverlay = document.getElementById('pop-up-overlay');
+const popUpClose = document.getElementById('pop-up-close');
+
+/**
+ * Function to toggle pop up visibility.
+ * @param {Event} visibility - The first number.
+ * @returns {null} .
+ */
+const togglePopUpVisibility = (visibility) => {
+  popUpOverlay.style.display = visibility;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const radioButtons = document.querySelectorAll('input[name="color"]');
   const displayText = document.querySelector('#color-value');
@@ -21,5 +34,18 @@ document.addEventListener('keydown', (event) => {
     searchInput.select(); // Optionally, select existing text
   }
 });
+
+sizeButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('size event click event identified');
+
+  togglePopUpVisibility('block');
+})
+
+popUpClose.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  togglePopUpVisibility('none')
+})
 
 console.log("script worked")
