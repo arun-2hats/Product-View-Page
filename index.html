@@ -30,7 +30,7 @@
                 <div class="left-section">
                     <img width="41" height="41" src="./assets/logo transparent.svg" alt="site-logo">
                     <ul>
-                        <li class="active-link "><a class="link" aria-label="womens links" tabindex="1" href="#">WOMEN</a></li>
+                        <li class="active-link"><a class="link" aria-label="womens links" tabindex="1" href="#">WOMEN</a></li>
                         <li><a aria-label="mens links" tabindex="2" class="link" href="#">MEN</a></li>
                         <li><a aria-label="kids links" tabindex="3" class="link" href="#">KIDS</a></li>
                     </ul>
@@ -38,7 +38,7 @@
                 <div class="right-section">
                     <form class="search-container">
                         <input id="search" tabindex="4"  aria-label="Search Item" placeholder="Search for items" class="search-input" type="text">
-                        <button tabindex="5"  aria-label="Search Item" class="" ><img width="20" height="20" src="./assets/Search.svg" alt="search-icon"></button>
+                        <button type="submit" tabindex="5"  aria-label="Search Item" class="" ><img width="20" height="20" src="./assets/Search.svg" alt="search-icon"></button>
                     </form>
                     <div class="icon-links">
                         <ul>
@@ -121,7 +121,7 @@
                     </div>
 
                     <form>
-
+                        <!-- Product Varient -->
                         <div class="product-color-varient">
                             <p class="p-secondary">Color</p>
 
@@ -148,20 +148,21 @@
 
                             <!-- Row 1 -->
                             <div class="row">
-                              <div class="col select-col">
-                                <select aria-placeholder="Please select size" tabindex="22" aria-label="Please select size" name="size" id="size" class="pointer">
-                                    <option value="" selected>Please select</option>
-                                    <option value="XS">XS</option>
-                                    <option value="SM">SM</option>
-                                    <option value="MD">MD</option>
-                                    <option value="LG">LG</option>
-                                </select>
-                              </div>
+                                <!-- Select Input -->
+                                <div class="col select-col">
+                                    <select aria-placeholder="Please select size" tabindex="22" aria-label="Please select size" name="size" id="size" class="pointer">
+                                        <option value="" selected>Please select</option>
+                                        <option value="XS">XS</option>
+                                        <option value="SM">SM</option>
+                                        <option value="MD">MD</option>
+                                        <option value="LG">LG</option>
+                                    </select>
+                                </div>
+                              <!-- Size Chart Button -->
                               <div class="col button-col size-btn ">
                                 <button id="size-btn" tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold ">
                                     <span class="icon-hanger"></span> Size Chart
                                 </button>
-                                
                               </div>
                             </div>
                           
@@ -172,6 +173,8 @@
                                         <!-- Quantity Input -->
                                         <input min="0" tabindex="24" aria-label="Input Quantity" class="input input-number" type="number" />
                                     </div>
+
+                                    <!-- Add To Cart -->
                                     <div class="">
                                         <button tabindex="25"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
                                             <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
@@ -200,34 +203,19 @@
                                     <th>HOW MUCH</th>
                                 </tr>
                                 <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
+                                    <td>Standard delivery</td>
+                                    <td>1-4 business days</td>
+                                    <td>$4.50</td>
                                 </tr>
                                 <tr>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
+                                    <td>Express delivery</td>
+                                    <td>1 business day</td>
+                                    <td>$10.00</td>
                                 </tr>
                                 <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-                                </tr>
-                                <tr>
-                                    <td>Island Trading</td>
-                                    <td>Helen Bennett</td>
-                                    <td>UK</td>
-                                </tr>
-                                <tr>
-                                    <td>Laughing Bacchus Winecellars</td>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                </tr>
-                                <tr>
-                                    <td>Magazzini Alimentari Riuniti</td>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Pick up in store</td>
+                                    <td>1-3 business days</td>
+                                    <td>Free</td>
                                 </tr>
                             </table>
                         </div>
@@ -269,7 +257,7 @@
             <div class="pop-up-content">
                 <div class="pop-up-header">
                     <h4>Size Chart</h4>
-                    <button aria-label="close pop up" class="primary-btn btn">close</button>
+                    <button id="pop-up-close" aria-label="close pop up" class="primary-btn btn">close</button>
                 </div>
 
                 <div class="pop-up-content-wrapper">
@@ -342,11 +330,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </main>
-    
 
     <!-- <section class="subscirbe-section">
         <div class="left-section">

@@ -26,6 +26,21 @@ main{
     }
 }
 
+
+section{
+    .main-heading{
+        margin-top: 10.5rem;
+    }
+
+    @include respond-to(md){
+        padding: 0.5rem;
+
+        .main-heading{
+            margin-top: 4.5rem;
+        }
+    }
+}
+
 table{
     color: $text-secondary-color;
     border-collapse: collapse;
@@ -81,6 +96,15 @@ select {
     }
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
 .input, .input-number{
     padding: .8rem 1rem;
     border-radius: $border-radius-base;
@@ -95,14 +119,6 @@ select {
    width: 3rem;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-}
-
 .btn{
     @include flexbox(row, center, center);
     gap: .5rem;
@@ -113,7 +129,6 @@ input::-webkit-inner-spin-button {
     padding: .6rem 1rem;
     font-size: $sm-font-size;
 
-    
     &:hover{
         background-color: $button-hover-bg;
     }
@@ -186,16 +201,3 @@ input::-webkit-inner-spin-button {
     background: none;
 }
 
-section{
-    .main-heading{
-        margin-top: 10.5rem;
-    }
-
-    @include respond-to(md){
-        padding: 0.5rem;
-
-        .main-heading{
-            margin-top: 4.5rem;
-        }
-    }
-}
