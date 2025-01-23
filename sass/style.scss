@@ -15,8 +15,14 @@ main{
     max-width: 77rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
+    @include respond-to(sm){
+        padding: 0 !important;
+    }
+    @include respond-to(xl){
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 table{
@@ -26,7 +32,7 @@ table{
     font-family: $font-primary;
     
     tr{
-        border-bottom: 0.125rem solid $border-color-default;
+        border-bottom: 0.1rem solid $border-color-default;
         font-size: $base-font-size;
     }
 
@@ -49,40 +55,43 @@ select {
     background-color: transparent;
     cursor: pointer;
     min-width: 21.75rem;
-    // min-width: 50%;
-    padding: 1rem;
+    padding: .8rem 1rem;
     border-radius: $border-radius-base;
     -webkit-appearance: none;
     appearance: none;
 
     background-image: url("../assets/Down-chevron.svg");
-    background-size: 24px;
+    background-size: 18px;
     background-repeat: no-repeat;
     background-position: calc(100% - 8px) center;
+
+    &:has(option:checked:first-child) {
+        color: #3338;
+        option {
+          color: black;
+          text-transform: none;
+        }
+    }
 
     @include respond-to(md){
         padding: 1rem;
         min-width: 10.75rem;
 
     }
-
-        
 }
 
-
-
 .input, .input-number{
-    padding: 1rem;
+    padding: .8rem 1rem;
     border-radius: $border-radius-base;
     border: 0.1rem solid $border-color-default;
-    max-width: 100px;
+    max-width: 6.25rem;
     @include respond-to(md){
-        padding: 1rem;
+        padding: .8rem 1rem;
     }
 }
 
 .input-number{
-   width: 5rem;
+   width: 3rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -95,22 +104,22 @@ input::-webkit-inner-spin-button {
 
 .btn{
     @include flexbox(row, center, center);
-    gap: .25rem;
+    gap: .5rem;
     text-align: center;
     border-radius: $border-radius-base;
     border: none;
     cursor: pointer;
-    padding: .75rem 1rem;
+    padding: .6rem 1rem;
     font-size: $sm-font-size;
 
-    @include respond-to(md){
-        padding: 1rem;
-        border: none;
-        font-size: $sm-font-size;
-    }
-
+    
     &:hover{
         background-color: $button-hover-bg;
+    }
+    @include respond-to(md){
+        padding: .6rem 1rem;
+        border: none;
+        font-size: $sm-font-size;
     }
 }
 
@@ -129,20 +138,28 @@ input::-webkit-inner-spin-button {
     border: 0.1rem solid $primary-color !important; 
     border-style: inset;
     color: $primary-color;
-    font-size: $base-font-size !important; 
-
+    font-size: $base-font-size; 
+    @include respond-to(md){
+        font-size: $sm-font-size;
+    }
 }
 
 .ghost-btn{
     background: none;
     border: none;
     cursor: pointer;
+    @include flexbox(row, end, center);
+    gap: .5rem;
 }
 
 .tab-btn{
     background: transparent;
     color: $text-tertiary-color;
-    font-size: $base-font-size !important; 
+    font-size: $base-font-size; 
+
+    @include respond-to(md){
+        font-size: $sm-font-size;
+    }
 }
 
 .icon-btn{
@@ -171,69 +188,7 @@ section{
         padding: 0.5rem;
 
         .main-heading{
-            margin-top: 3.5rem;
+            margin-top: 4.5rem;
         }
     }
 }
-
-/* Basic styling */
-.color-picker {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    p{
-        margin: 0 !important;
-        color: $text-tertiary-color;
-        margin-left: .5rem !important;
-    }
-}
-
-.color-picker label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-/* Hide radio buttons */
-.color-picker input[type="radio"] {
-    display: none;
-}
-
-/* Color boxes */
-.color-box {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    transition: transform 0.2s, border 0.2s;
-    box-shadow: $border-color-default 0px 1px 0px, $border-color-default 0px 0px 0px 2px;
-}
-
-.color-box.red {
-    background-color: #e0aea2;
-}
-
-.color-box.green {
-    background-color: #c0dded;
-}
-
-.color-box.blue {
-    background-color: #fede41;
-}
-
-.color-box.yellow {
-    background-color: yellow;
-}
-
-/* Highlight selected color */
-.color-picker input[type="radio"]:checked + .color-box {
-    border-color: #ffffff;
-    box-shadow: $primary-color 0px 1px 4px, $primary-color 0px 0px 0px 1px;
-}
-
-// .form-inputs{
-//     @include flexbox(column, start, center);
-//     gap: 1rem;
-// }

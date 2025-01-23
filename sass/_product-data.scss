@@ -5,6 +5,82 @@
     width: 100%;
     gap: 0.5rem;
 
+    form{
+        .form-layout{
+            margin-top: 1rem;
+
+            .size-btn{
+                margin: auto;
+                button{
+                    text-align: end;
+                }
+            }
+            
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+
+        .form-layout {
+            @include flexbox(column, normal, normal);
+        
+            .row {
+                @include flexbox(row, normal, normal);
+
+                gap: 1.5rem;   
+            
+                @include respond-to(md){
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    }
+            
+                &:nth-child(3){
+                    margin-top: 2rem;
+                }
+            
+                .nested-row{
+                    @include flexbox(row, normal, normal);
+
+                    gap: 1.5rem;
+                    min-width: 21.75rem;
+            
+                    @include respond-to(md){
+                        min-width: 100%;
+                    }
+            
+                    div:nth-child(2){
+                        flex: 1;
+            
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            
+                .col {
+                    flex: 1;
+            
+                    &.select-col {
+                    select {
+                        width: 100%;
+                    }
+                    }
+            
+                    &.button-col {
+                    button {
+                        width: 100%;
+                        cursor: pointer;
+            
+                        @media (max-width: 768px) {
+                        // margin-bottom: 8px;
+                        }
+                    }
+                    }
+                }
+            }
+        }
+    }
+
     .price-and-review{
         .price{
             @include flexbox(row, center, center);
@@ -38,6 +114,7 @@
             @include flexbox(row, start, start);
 
             gap: 0.5rem;
+
             .picker{
                 @include flexbox(row, center, center);
 
@@ -50,17 +127,9 @@
                     width: 1.125rem;
                     height: 1.125rem;
                     border-radius: $border-radius-full; 
-                }
+                }   
 
-                &:nth-child(1) .color{
-                    background-color: #E0AEA2;
-                }
-                &:nth-child(2) .color{
-                    background-color: #C0DDED;
-                }
-                &:nth-child(3) .color{
-                    background-color: #FEDE41;
-                }
+                
             }
 
             .active-picker{
@@ -70,6 +139,54 @@
             p{
                 color: $text-secondary-color;     
             }
+        }
+
+        .color-picker {
+            @include flexbox(row, normal, center);
+
+            gap: 1rem;
+            p{
+                margin: 0 !important;
+                color: $text-tertiary-color;
+                margin-left: .5rem !important;
+            }
+        }
+
+        .color-picker label {
+            cursor: pointer;
+            @include flexbox(row, center, center);
+        }
+
+        .color-picker input[type="radio"] {
+            display: none;
+        }
+
+        /* Color boxes */
+        .color-box {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            transition: transform 0.2s, border 0.2s;
+            box-shadow: $border-color-default 0px 1px 0px, $border-color-default 0px 0px 0px 2px;
+        }
+
+        .color-box.pink {
+            background-color: #e0aea2;
+        }
+
+        .color-box.blue {
+            background-color: #c0dded;
+        }
+
+        .color-box.yellow {
+            background-color: #fede41;
+        }
+
+        /* Highlight selected color */
+        .color-picker input[type="radio"]:checked + .color-box {
+            border-color: #ffffff;
+            box-shadow: $primary-color 0px 1px 4px, $primary-color 0px 0px 0px 1px;
         }
 
         p{
@@ -117,9 +234,6 @@
             }
         }
 
-        button{
-            // width: 100%;
-        }
     }
 
     .delivery-return-data-section{
@@ -129,9 +243,10 @@
         .delivery-section{
             border-bottom: 1px solid $border-color-default;
 
-            h3{
-                margin-left: 1.5rem;
+            &:nth-child(1){
+                margin-top: 2.5rem;
             }
+
             p{
                 margin: 0.75rem 0;
             }
@@ -143,7 +258,6 @@
             button{
                 padding: 0;
             }
-            // gap: .5rem;
         }
 
         .payment-options{
@@ -161,9 +275,6 @@
                 cursor: pointer;
             }
         }
-
     }
-
-    
 }
 

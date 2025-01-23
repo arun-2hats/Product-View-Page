@@ -26,13 +26,11 @@ header{
 
         .left-section, .right-section{
             @include flexbox(row, start, center);
-            // gap: 1rem;
         }
 
         ul{
             list-style: none;
             display: flex;
-            // gap: 1rem;
             height: 100%;
 
             li{
@@ -57,9 +55,7 @@ header{
 
             .active-link{
                 border-bottom: 0.125rem solid $primary-color;
-                // padding: 0 0.5rem 1rem 0.5rem;
                 font-weight: $font-weight-bold;
-                // border-bottom: 1px solid #17696a;
                 a{
                     color: $primary-color;
                 }
@@ -94,7 +90,6 @@ header{
                         a{
                             @include flexbox(row, center, center);
                             font-size: $md-font-size;
-                            // padding: .5rem;
                             border-radius: $border-radius-full;
                             text-decoration: none;
 

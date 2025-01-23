@@ -122,63 +122,73 @@
                     </div>
 
                     <form>
+
                         <div class="product-color-varient">
                             <p class="p-secondary">Color</p>
+
                             <div class="color-picker">
                                 <label>
-                                  <input type="radio" name="color" value="red" />
-                                  <span class="color-box red"></span>
+                                  <input type="radio" name="color" value="Pink" />
+                                  <span class="color-box pink"></span>
                                 </label>
                                 <label>
-                                  <input type="radio" name="color" value="green" />
-                                  <span class="color-box green"></span>
-                                </label>
-                                <label>
-                                  <input type="radio" name="color" value="blue" />
+                                  <input type="radio" name="color" value="Blue" />
                                   <span class="color-box blue"></span>
                                 </label>
-                                <p class="p-tertiary">Pink</p>
+                                <label>
+                                  <input type="radio" name="color" value="Yellow" />
+                                  <span class="color-box yellow"></span>
+                                </label>
+                                <p class="p-tertiary " id="color-value">Pink</p>
                             </div>
                         </div>
 
-                        <div class="form-inputs">
-                            <div class="select-row">
-                                <p class="p-secondary ">Size</p>     
-                                <div class="size-input-group">
-                                    <select tabindex="22"  aria-label="Size" name="size" id="size" class="pointer">
-                                        <option value="XS">XS</option>
-                                        <option value="SM">SM</option>
-                                        <option value="MD">MD</option>
-                                        <option value="LG">LG</option>
-                                    </select>
-                                    <button tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold">
-                                        <span class="icon-hanger"></span> Size Chart
-                                    </button>
-                                </div>  
+
+                        <div class="form-layout">
+                            <p class="p-secondary">Size</p>
+
+                            <!-- Row 1 -->
+                            <div class="row">
+                              <div class="col select-col">
+                                <select aria-placeholder="please select" tabindex="22" aria-label="Size" name="size" id="size" class="pointer">
+                                    <option value="" selected>Please select</option>
+                                    <option value="XS">XS</option>
+                                    <option value="SM">SM</option>
+                                    <option value="MD">MD</option>
+                                    <option value="LG">LG</option>
+                                </select>
+                              </div>
+                              <div class="col button-col size-btn ">
+                                <button tabindex="23"  aria-label="Size Chart" class="ghost-btn lato-bold ">
+                                    <span class="icon-hanger"></span> Size Chart
+                                </button>
+                              </div>
                             </div>
-    
-                            <div class="action-links">
-                                <div class="action-link-btn-grp1">
-                                    <!-- Quantity Input -->
-                                    <input min="0" tabindex="24" aria-label="Input Quantity" class="input input-number" type="number" />
-                                    <!-- Add to Cart -->
-                                    <button tabindex="25"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
-                                        <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
-                                        Add To Cart
-                                    </button>
-                                </div>
-                                
+                          
+                            <!-- Row 2 -->
+                            <div class="row"> 
+                              <div class="nested-row">
+                                    <div class="">
+                                        <!-- Quantity Input -->
+                                        <input min="0" tabindex="24" aria-label="Input Quantity" class="input input-number" type="number" />
+                                    </div>
+                                    <div class="">
+                                        <button tabindex="25"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
+                                            <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
+                                            Add to cart
+                                        </button>
+                                    </div>
+                              </div>
+                              <div class="col button-col">
                                 <!-- Favourite -->
                                 <button tabindex="26" aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
                                     <img width="20" height="20" src="./assets/outline.svg" alt="wishlist-icon">
                                     Favourite
                                 </button>
-                        </div>
+                              </div>
                             </div>
-                            
+                        </div>
 
-                    </form>
-    
                     <div class="delivery-return-data-section">
                         <div class="delivery-section">
                             <h3 class="h6 lato-bold">Delivery</h3>
@@ -222,7 +232,6 @@
                             </table>
                         </div>
     
-    
                         <div class="delivery-section">
                             <h3 class="h6 lato-bold">Return</h3>
                             <p>You have <b>60 days</b> to return the item(s) using any of the following methods:</p>
@@ -264,5 +273,7 @@
         </div>
         <img src="./assets/section2-img.jpg" height="416" width="461" alt="subscribe letter illustration">
     </section> -->
+
+    <script src="./script.js"></script>
 </body>
 </html>

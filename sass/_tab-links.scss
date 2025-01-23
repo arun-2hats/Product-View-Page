@@ -4,5 +4,11 @@
     padding-bottom: 1rem;
 
     @include flexbox(row, start, center);
+    overflow-x: scroll;
+    text-wrap: nowrap;
+
+    button{
+        padding: .8rem 1rem;
+    }
 }
 

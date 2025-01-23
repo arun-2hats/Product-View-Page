@@ -35,8 +35,11 @@
 
         img{
             max-width: 100%;
-            // width: 37.5rem;
             height: auto;
+
+            @include respond-to(md){
+                max-width: 100%;
+            }
 
         }
     }
