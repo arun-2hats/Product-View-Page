@@ -131,6 +131,7 @@ ActivateLink(thumbnail[currentImg]);
 // preview on thumbnail click
 thumbnail.forEach((img, index) => {
   img.addEventListener('click', (event) => {
+    event.preventDefault();
     // console.log('event form thumbnaill click', event)
     currentImg = index;
     ActivateLink(thumbnail[index]);

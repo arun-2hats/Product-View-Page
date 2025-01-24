@@ -10,5 +10,10 @@
     button{
         padding: .8rem 1rem;
     }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    scrollbar-width: none;
 }
 
