@@ -74,24 +74,28 @@
                 <!-- Product Image slides -->
                 <div class="img-slider">
                     <div class="product-img ">
-                        <img fetchpriority="high" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
+                        <img id="img-preview" fetchpriority="high" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
                         <noscript>
                             <img fetchpriority="high" loading="eager" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
-                          </noscript>
+                        </noscript>
                         <div class="slider-navs">
-                            <button tabindex="11" aria-label="Previous" class="btn icon-btn" ><img width="20" height="20" src="./assets/Left.svg" alt="left-arrow"></button>
-                            <button tabindex="12" aria-label="Next" class="btn icon-btn"><img width="20" height="20" src="./assets/Right.svg" alt="right-arrow"></button>
+                            <button id="prev" tabindex="11" aria-label="Previous" class="btn icon-btn" ><img width="20" height="20" src="./assets/Left.svg" alt="left-arrow"></button>
+                            <button id="next" tabindex="12" aria-label="Next" class="btn icon-btn"><img width="20" height="20" src="./assets/Right.svg" alt="right-arrow"></button>
                         </div>
                     </div>
     
-                    <div class="preview-imgs">
-                        <a tabindex="13" class="btn img-button"><img loading="lazy" src="./assets/preview1.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="14" class="btn img-button"><img loading="lazy" src="./assets/preview2.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="15" class="btn img-button"><img loading="lazy" src="./assets/preview3.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="16" class="btn img-button"><img loading="lazy" src="./assets/preview4.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                    <div id="preview-img-container" class="preview-imgs">
+                        <a tabindex="13" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview1.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="14" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview2.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="15" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview3.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="16" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview4.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="13" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview1.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="14" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview2.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="15" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview3.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
+                        <a tabindex="16" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview4.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
                         
                         <div class="video-thumbnail">
-                            <a tabindex="17" class="btn img-button"><img loading="lazy" class src="./assets/product-image1.jpg" height="100" width="100" alt="Basic hooded sweatshirt in pink">
+                            <a tabindex="17" class="btn img-button thumbnail"><img loading="lazy" class src="./assets/product-image1.jpg" height="100" width="100" alt="Basic hooded sweatshirt in pink">
                                 <div class="overlay">
                                     <img width="24" height="24" src="./assets/Play.svg" alt="play-icon">
                                 </div>

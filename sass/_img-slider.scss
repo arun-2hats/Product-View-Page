@@ -69,6 +69,8 @@
     @include flexbox(row, space-between, center, start);
     
     gap: 1rem;
+    max-width: 37.5rem;
+    overflow-x: scroll;
 
     @include respond-to(lg){
         width: 37.5rem;
@@ -79,7 +81,7 @@
 
     img{
         border-radius: $border-radius-base;
-        width: 100%;
+        // width: 100%;
         max-width: 6.25rem;
         height: auto;
     }
