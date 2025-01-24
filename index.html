@@ -11,12 +11,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <!-- <link rel="manifest" href="/site.webmanifest"> -->
     
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/b5c7807d1d/UntitledProject/style.css">
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/b5c7807d1d/UntitledProject/style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -31,20 +30,20 @@
                     <img width="41" height="41" src="./assets/logo transparent.svg" alt="site-logo">
                     <ul>
                         <li class="active-link"><a class="link" aria-label="womens links" tabindex="0" href="#">WOMEN</a></li>
-                        <li><a aria-label="mens links" tabindex="1" class="link" href="#">MEN</a></li>
-                        <li><a aria-label="kids links" tabindex="2" class="link" href="#">KIDS</a></li>
+                        <li><a aria-label="mens links" class="link" href="#">MEN</a></li>
+                        <li><a aria-label="kids links" class="link" href="#">KIDS</a></li>
                     </ul>
                 </div>
                 <div class="right-section">
                     <form class="search-container">
-                        <input id="search" tabindex="3"  aria-label="Search Item" placeholder="Search for items" class="search-input" type="text">
-                        <button type="submit" tabindex="4"  aria-label="Search Item" class="" ><img width="20" height="20" src="./assets/Search.svg" alt="search-icon"></button>
+                        <input id="search"  aria-label="Search Item" placeholder="Search for items" class="search-input" type="text">
+                        <button type="submit"  aria-label="Search Item" class="" ><span class="icon-search"></span></button>
                     </form>
                     <div class="icon-links">
                         <ul>
-                            <li><a tabindex="5" aria-label="Account" class="icon-link" href=""><span class="icon-Account"></span></a></li>
-                            <li><a tabindex="6" aria-label="Whishlist" class="icon-link" href=""><span class="icon-Outline"></span></a></li>
-                            <li><a tabindex="7" aria-label="Cart" class="icon-link" href=""><span class="icon-Empty-Cart"></span></a></li>
+                            <li><a aria-label="Account" class="icon-link" href=""><span class="icon-Account"></span></a></li>
+                            <li><a aria-label="Whishlist" class="icon-link" href=""><span class="icon-Outline"></span></a></li>
+                            <li><a aria-label="Cart" class="icon-link" href=""><span class="icon-Empty-Cart"></span></a></li>
                         </ul>
                         <button class="btn primary-btn">
                             Menu
@@ -59,13 +58,13 @@
             <h1 class="lato-black main-heading">Basic hooded sweatshirt in pink</h1>
     
             <div class="tab-links">
-                <button tabindex="8" aria-label="Add to Favourite" class="active-tab-btn btn lato-bold">
+                <button aria-label="Add to Favourite" class="active-tab-btn btn lato-bold">
                     General Info
                 </button>
-                <button tabindex="9" aria-label="Product Details" class="tab-btn btn lato-bold">
+                <button aria-label="Product Details" class="tab-btn btn lato-bold">
                     Product details
                 </button>
-                <button tabindex="10" aria-label="Reviews" class="tab-btn btn lato-bold">
+                <button aria-label="Reviews" class="tab-btn btn lato-bold">
                     Reviews<sup >12</sup >
                 </button>
             </div>
@@ -74,24 +73,27 @@
                 <!-- Product Image slides -->
                 <div class="img-slider">
                     <div class="product-img ">
-                        <img fetchpriority="high" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
+                        <img id="img-preview" fetchpriority="high" src="./assets/product-image1.webp" height="600" width="600" alt="Basic hooded sweatshirt in pink">
                         <noscript>
-                            <img fetchpriority="high" loading="eager" src="./assets/product-image1.jpg" height="600" width="600" alt="Basic hooded sweatshirt in pink">
-                          </noscript>
+                            <img fetchpriority="high" loading="eager" src="./assets/product-image1.webp" height="600" width="600" alt="Basic hooded sweatshirt in pink">
+                        </noscript>
                         <div class="slider-navs">
-                            <button tabindex="11" aria-label="Previous" class="btn icon-btn" ><img width="20" height="20" src="./assets/Left.svg" alt="left-arrow"></button>
-                            <button tabindex="12" aria-label="Next" class="btn icon-btn"><img width="20" height="20" src="./assets/Right.svg" alt="right-arrow"></button>
+                            <button id="prev" aria-label="Previous" class="btn icon-btn" ><img width="20" height="20" src="./assets/Left.svg" alt="left-arrow"></button>
+                            <button id="next" aria-label="Next" class="btn icon-btn"><img width="20" height="20" src="./assets/Right.svg" alt="right-arrow"></button>
                         </div>
                     </div>
     
-                    <div class="preview-imgs">
-                        <a tabindex="13" class="btn img-button"><img loading="lazy" src="./assets/preview1.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="14" class="btn img-button"><img loading="lazy" src="./assets/preview2.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="15" class="btn img-button"><img loading="lazy" src="./assets/preview3.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        <a tabindex="16" class="btn img-button"><img loading="lazy" src="./assets/preview4.png" height="100" width="100" alt="Basic hooded sweatshirt in pink"></a>
-                        
+                    <div id="preview-img-container" class="preview-imgs">
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview1.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview2.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview3.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview4.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview1.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview2.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview3.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
+                        <a href="#" class="btn img-button thumbnail"><img loading="lazy" src="./assets/preview4.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink"></a>
                         <div class="video-thumbnail">
-                            <a tabindex="17" class="btn img-button"><img loading="lazy" class src="./assets/product-image1.jpg" height="100" width="100" alt="Basic hooded sweatshirt in pink">
+                            <a href="#" class="btn img-button thumbnail"><img loading="lazy" class src="./assets/product-image1.webp" height="104" width="104" alt="Basic hooded sweatshirt in pink">
                                 <div class="overlay">
                                     <img width="24" height="24" src="./assets/Play.svg" alt="play-icon">
                                 </div>
@@ -150,7 +152,7 @@
                             <div class="row">
                                 <!-- Select Input -->
                                 <div class="col select-col">
-                                    <select aria-placeholder="Please select size" tabindex="18" aria-label="Please select size" name="size" id="size" class="pointer">
+                                    <select aria-label="Please select size" name="size" id="size" class="pointer">
                                         <option value="" selected>Please select</option>
                                         <option value="XS">XS</option>
                                         <option value="SM">SM</option>
@@ -160,7 +162,7 @@
                                 </div>
                               <!-- Size Chart Button -->
                               <div class="col button-col size-btn ">
-                                <button id="size-btn" tabindex="19"  aria-label="Size Chart" class="ghost-btn lato-bold ">
+                                <button id="size-btn"  aria-label="Size Chart" class="ghost-btn lato-bold ">
                                     <span class="icon-hanger"></span> Size Chart
                                 </button>
                               </div>
@@ -171,12 +173,12 @@
                               <div class="nested-row">
                                     <div class="">
                                         <!-- Quantity Input -->
-                                        <input min="0" tabindex="20" aria-label="Input Quantity" class="input input-number" type="number" />
+                                        <input min="0" aria-label="Input Quantity" class="input input-number" type="number" />
                                     </div>
 
                                     <!-- Add To Cart -->
                                     <div class="">
-                                        <button tabindex="21"  aria-label="Add to Cart" class="primary-btn btn lato-bold">
+                                        <button  aria-label="Add to Cart" class="primary-btn btn lato-bold">
                                             <img width="20" height="20" src="./assets/Cart.svg" alt="cart-icon">
                                             Add to cart
                                         </button>
@@ -184,7 +186,7 @@
                               </div>
                               <div class="col button-col">
                                 <!-- Favourite -->
-                                <button tabindex="22" aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
+                                <button aria-label="Add to Favourite" class="secondary-btn btn lato-bold">
                                     <img width="20" height="20" src="./assets/outline.svg" alt="wishlist-icon">
                                     Favourite
                                 </button>
@@ -231,19 +233,19 @@
     
                         <div class="share-links">
                             <h3 class="h6 lato-bold">Share: </h3>
-                            <button class="btn ghost-btn" tabindex="23" aria-label="Facebook"><img width="20" height="20" src="./assets/Facebook.svg" alt="facebook-icon"></button>
-                            <button class="btn ghost-btn" tabindex="24" aria-label="Facebook"><img width="20" height="20" src="./assets/Twitter.svg" alt="twitter-icon"></button>
-                            <button class="btn ghost-btn" tabindex="25" aria-label="Facebook"><img width="20" height="20" src="./assets/pinterest.svg" alt="pineterest-icon"></button>
+                            <button class="btn ghost-btn" aria-label="Facebook"><img width="20" height="20" src="./assets/Facebook.svg" alt="facebook-icon"></button>
+                            <button class="btn ghost-btn" aria-label="Facebook"><img width="20" height="20" src="./assets/Twitter.svg" alt="twitter-icon"></button>
+                            <button class="btn ghost-btn" aria-label="Facebook"><img width="20" height="20" src="./assets/pinterest.svg" alt="pineterest-icon"></button>
                         </div>
     
                         <div class="payment-options">
-                            <button tabindex="26" class="payment-container">
+                            <button class="payment-container">
                                 <img loading="lazy" width="72" height="24" src="./assets/visa.svg" alt="visa-logo">
                             </button>
-                            <button tabindex="27" class="payment-container">
+                            <button class="payment-container">
                                 <img loading="lazy" width="55" height="42" src="./assets/master-card.svg" alt="master-card-logo">
                             </button>
-                            <button tabindex="28" class="payment-container">
+                            <button class="payment-container">
                                 <img loading="lazy" width="78" height="21" src="./assets/pay-pal.svg" alt="pay-pal-logo" >
                             </button>
                         </div>
