@@ -2,7 +2,7 @@
 .product-details{
     @include flexbox(row);
 
-    gap: 8rem;
+    gap: 6.5rem;
     padding-top: 2rem;
 
     @include respond-to(md){
@@ -29,7 +29,10 @@
             right: 0;
 
             button{
-                margin: 1rem;
+                margin: 2rem;
+                img{
+                    max-width: none;
+                }
             }
         }
 
