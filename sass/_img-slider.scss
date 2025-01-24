@@ -79,10 +79,14 @@
         width: 100%;
     }
 
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    scrollbar-width: none;
+
     img{
         border-radius: $border-radius-base;
-        // width: 100%;
-        max-width: 6.25rem;
+        // max-width: 6.25rem;
         height: auto;
     }
 

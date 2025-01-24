@@ -12,7 +12,7 @@ const prevButton =document.getElementById('prev');
 // Base img path
 const imgPath = './assets';
 // imgArray
-const imgArray = ['./assets/preview1.png', './assets/preview2.png', './assets/preview3.png', './assets/preview4.png', './assets/product-image1.jpg', './assets/preview1.png', './assets/preview2.png', './assets/preview3.png', './assets/preview4.png']
+const imgArray = ['./assets/product-image1.webp', './assets/preview2.webp', './assets/preview3.webp', './assets/preview4.webp', './assets/product-image1.webp', './assets/preview2.webp', './assets/preview3.webp', './assets/preview4.webp', './assets/product-image1.webp']
 let currentImg = 0;
 const imgArrayLength = imgArray.length - 1;
 // Selecting all image thumbnails
@@ -20,13 +20,13 @@ const thumbnail = document.querySelectorAll(`.thumbnail`);
 // Accessing thumbnail image container to autoscroll as per
 // -thumbnail click
 const  thumbnailContainer = document.getElementById('preview-img-container');
-console.log('thumbnail', thumbnail)
 
 /**
  * Function to toggle pop up visibility.
  * @param {Event} visibility - The first number.
  * @returns {null} .
  */
+
 const togglePopUpVisibility = (visibility) => {
   popUpOverlay.style.display = visibility;
 }
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('keydown', (event) => {
   // Check for the desired key combination (Ctrl + Shift + F)
-
   if (event.ctrlKey && event.shiftKey && event.key === 'F') {
     console.log('event detected')
     event.preventDefault(); // Prevent any default browser action
@@ -71,7 +70,6 @@ const onNextHandler = () => {
   if ( currentImg >= 0 && currentImg < imgArrayLength){
     currentImg++;
     imgPreview.src = imgArray[currentImg];
-    // console.log(currentImg, imgArrayLength);
     ActivateLink(thumbnail[currentImg]);
     thumbnailContainer.scrollBy({
       left: 100, // Negative value to scroll left
@@ -81,8 +79,8 @@ const onNextHandler = () => {
     currentImg = 0;
     imgPreview.src = imgArray[currentImg];
     ActivateLink(thumbnail[0]);
-    thumbnailContainer.scrollBy({
-      right: 0, // Negative value to scroll left
+    thumbnailContainer.scrollTo({
+      left: 0, // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
   }
@@ -95,11 +93,15 @@ const onPrevHandler = () => {
     imgPreview.src = imgArray[currentImg];
     ActivateLink(thumbnail[currentImg]);
     thumbnailContainer.scrollBy({
-      left: -100, // Negative value to scroll left
+      left: -150, // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
   }else{
     currentImg = imgArrayLength;
+    thumbnailContainer.scrollTo({
+      behavior: 'smooth', // Smooth scrolling effect
+      left: 1000
+    });
   }
 } 
 
@@ -115,13 +117,10 @@ prevButton.addEventListener('click', (event) => {
 
 // function to apppend and remove active class to the thumbnail
 const ActivateLink = (currentThumbnail) => {
-  // console.log(currentThumbnail);
 
   thumbnail.forEach(element => {
-    // console.log('element', element)
     element.classList.remove('active-img-button');
   });
-
   
   currentThumbnail.classList.add('active-img-button');  
 }
@@ -136,21 +135,10 @@ thumbnail.forEach((img, index) => {
     currentImg = index;
     ActivateLink(thumbnail[index]);
     imgPreview.src = imgArray[index];
-    // if(currentImg > index){
-    //   thumbnailContainer.scrollBy({
-    //     left: -100*index, // Negative value to scroll left
-    //     behavior: 'smooth', // Smooth scrolling effect
-    //   });
-    // }else{
-    //   thumbnailContainer.scrollBy({
-    //     left: 100*index, // Negative value to scroll left
-    //     behavior: 'smooth', // Smooth scrolling effect
-    //   });
-    // }
-    thumbnailContainer.scrollBy({
-      left: 100, // Negative value to scroll left
+
+    thumbnailContainer.scrollTo({
+      left: index * thumbnail[0].offsetWidth, // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
-    
   })
 })
