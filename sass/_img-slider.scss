@@ -71,7 +71,7 @@
 .preview-imgs{
     @include flexbox(row, space-between, center, start);
     
-    gap: 1rem;
+    gap: 1.2rem;
     max-width: 37.5rem;
     overflow-x: scroll;
 
