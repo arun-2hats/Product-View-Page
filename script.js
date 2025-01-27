@@ -1,4 +1,5 @@
 
+
 const sizeButton = document.getElementById('size-btn');
 const popUpOverlay = document.getElementById('pop-up-overlay');
 const popUpClose = document.getElementById('pop-up-close');
@@ -30,7 +31,7 @@ const  thumbnailContainer = document.getElementById('preview-img-container');
 const togglePopUpVisibility = (visibility) => {
   popUpOverlay.style.display = visibility;
 }
-
+  
 document.addEventListener('DOMContentLoaded', () => {
   const radioButtons = document.querySelectorAll('input[name="color"]');
   const displayText = document.querySelector('#color-value');
@@ -132,7 +133,7 @@ ActivateLink(thumbnail[currentImg]);
 thumbnail.forEach((img, index) => {
   img.addEventListener('click', (event) => {
     event.preventDefault();
-    // console.log('event form thumbnaill click', event)
+    console.log('event form thumbnaill click', event)
     currentImg = index;
     ActivateLink(thumbnail[index]);
     imgPreview.src = imgArray[index];
