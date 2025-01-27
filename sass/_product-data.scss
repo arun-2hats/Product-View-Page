@@ -254,9 +254,9 @@
 
         .share-links{
             @include flexbox(row, start, center);
-            gap: 1rem;
+            gap: .5rem;
             button{
-                padding: 0;
+                padding: 0.25rem;
             }
         }
 

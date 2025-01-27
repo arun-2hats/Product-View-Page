@@ -74,7 +74,7 @@
     gap: 1.2rem;
     max-width: 37.5rem;
     overflow-x: scroll;
-
+    
     @include respond-to(lg){
         width: 37.5rem;
     }
@@ -87,11 +87,15 @@
     }
     scrollbar-width: none;
 
-    img{
-        border-radius: $border-radius-base;
-        // max-width: 6.25rem;
-        height: auto;
+    a{
+        border: 2px solid transparent;
+        img{
+            border-radius: $border-radius-base;
+            // max-width: 6.25rem;
+            height: auto;
+        }
     }
+    
 
     .video-thumbnail{
         position: relative;
