@@ -76,6 +76,7 @@ header{
                 button{
                     border: none;
                     background: none;
+                    padding: .25rem 0;
                     span{
                         font-size: 1.25rem;
                     }
@@ -83,7 +84,7 @@ header{
             }
             .icon-links{
                 ul{
-                    gap: 2.5rem;
+                    gap: 2rem;
                     padding: 0;
 
                     li{
@@ -94,7 +95,7 @@ header{
                             font-size: $md-font-size;
                             border-radius: $border-radius-full;
                             text-decoration: none;
-
+                            padding: .25rem;
                             &:hover{
                                 background-color: $icon-link-hover-color;
                             }

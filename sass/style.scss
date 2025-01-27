@@ -11,7 +11,7 @@
 @import './tab-links';
 @import './subscribe-section';
 @import './size-popup';
-@import './icon.scss';
+@import './icon';
 
 main{
     max-width: 77rem;
@@ -201,8 +201,8 @@ input::-webkit-inner-spin-button {
 }
 
 .active-img-button{
-    border: 2px solid $primary-color;
-    border-radius: $border-radius-base;
+    border: 2px solid $primary-color !important;
+    border-radius: $border-radius-base; 
 }
 
 .color-btn{

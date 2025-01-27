@@ -72,7 +72,7 @@ const onNextHandler = () => {
     imgPreview.src = imgArray[currentImg];
     ActivateLink(thumbnail[currentImg]);
     thumbnailContainer.scrollBy({
-      left: 100, // Negative value to scroll left
+      left: thumbnail[0].offsetWidth + 16, // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
   }else{
@@ -93,7 +93,7 @@ const onPrevHandler = () => {
     imgPreview.src = imgArray[currentImg];
     ActivateLink(thumbnail[currentImg]);
     thumbnailContainer.scrollBy({
-      left: -150, // Negative value to scroll left
+      left: -(thumbnail[0].offsetWidth + 16), // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
   }else{
@@ -138,7 +138,7 @@ thumbnail.forEach((img, index) => {
     imgPreview.src = imgArray[index];
 
     thumbnailContainer.scrollTo({
-      left: index * thumbnail[0].offsetWidth, // Negative value to scroll left
+      left: index * (thumbnail[0].offsetWidth + 16), // Negative value to scroll left
       behavior: 'smooth', // Smooth scrolling effect
     });
   })
